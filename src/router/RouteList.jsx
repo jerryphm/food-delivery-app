@@ -1,4 +1,4 @@
-import * as pageList from './pages';
+import * as pageList from '../pages';
 
 import { Route, Routes } from 'react-router-dom';
 

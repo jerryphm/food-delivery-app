@@ -1,7 +1,7 @@
 import {Footer, Header} from './layoutComponents'
 
 import React from 'react'
-import RouterList from '../RouteList'
+import RouterList from '../router/RouteList'
 
 function DefaultLayout() {
   return (
