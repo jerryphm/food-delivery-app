@@ -1,10 +1,9 @@
-import RouteList from './RouteList';
+import DefaultLayout from './layouts/DefaultLayout';
 
 function App() {
    return (
       <div className='App'>
-         <RouteList />
-         <h1 className='text-red-700'>hello</h1>
+         <DefaultLayout />
       </div>
    );
 }
