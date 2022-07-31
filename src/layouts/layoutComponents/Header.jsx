@@ -17,7 +17,7 @@ function Header() {
       setShowMenu(!isShowMenu);
    };
    return (
-      <header className='fixed top-0 right-0 left-0 flex justify-center'>
+      <header className='z-10 fixed top-0 right-0 left-0 flex justify-center'>
          <nav className='flex justify-between items-center max-w-7xl w-full py-2 sm:py-4 lg:py-5 px-2 sm:px-3 md:px-4 lg:px-6 mx-auto bg-white'>
             <section className='flex flex-col items-center'>
                <img
@@ -62,7 +62,7 @@ function Header() {
                      {isShowMenu ? <RiMenu3Line /> : <RiMenuLine />}
                   </div>
                   {isShowMenu ? (
-                     <MainLinks toggleMenu={toggleMenu} className='md:hidden fixed z-10 right-0 top-[72px] sm:top-[96px] flex flex-col items-end gap-10 w-fit min-w-[40vw] h-screen pt-14 pr-14 rounded-bl-md bg-white font-rnroll text-lg shadow-2xl' />
+                     <MainLinks toggleMenu={toggleMenu} className='md:hidden fixed right-0 top-[72px] sm:top-[96px] flex flex-col items-end gap-10 w-fit min-w-[40vw] h-screen pt-14 rounded-bl-md bg-white font-rnroll shadow-2xl' />
                   ) : null}
                </div>
             </section>

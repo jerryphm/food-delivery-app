@@ -16,9 +16,11 @@ function MainLinks({ className, toggleMenu }) {
             <Link
                onClick={() => {
                   setPath(to);
-                  toggleMenu()
+                  toggleMenu();
                }}
-               className={path == to ? 'text-red-500' : null}
+               className={`${
+                  path == to ? 'text-red-500' : null
+               } py-1 w-full text-center`}
                key={to}
                to={to}
             >

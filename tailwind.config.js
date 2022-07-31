@@ -8,10 +8,14 @@ module.exports = {
          fontFamily: {
             rnroll: ['RocknRoll One', 'sans-serif'],
          },
+         colors: {
+            lpink: '#fde4e4',
+            mwhite: '#fcfcfc',
+         },
       },
       fontFamily: {
          sans: ['Istok Web', 'sans-serif'],
-      }
+      },
    },
    plugins: [],
 };
