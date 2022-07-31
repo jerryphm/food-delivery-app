@@ -14,7 +14,7 @@ function Header() {
    return (
       <header
          onClick={toggleMenu}
-         className='fixed right-0 left-0 flex justify-center'
+         className='fixed top-0 right-0 left-0 flex justify-center'
       >
          <nav className='flex justify-between items-center max-w-7xl w-full py-2 sm:py-4 lg:py-5 px-2 sm:px-3 md:px-4 lg:px-6 mx-auto bg-white'>
             <section className='flex flex-col items-center'>

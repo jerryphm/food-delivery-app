@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
+import { helmet } from '../helmet';
 
 function Register() {
-  return (
-    <div>Register</div>
-  )
+   helmet('Register');
+   return <div>Register</div>;
 }
 
-export default Register
+export default Register;

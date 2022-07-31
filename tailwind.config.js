@@ -11,7 +11,7 @@ module.exports = {
       },
       fontFamily: {
          sans: ['Istok Web', 'sans-serif'],
-      },
+      }
    },
    plugins: [],
 };

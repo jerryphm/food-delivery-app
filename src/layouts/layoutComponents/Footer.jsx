@@ -17,88 +17,86 @@ import logo from '../../assets/images/res-logo.png';
  */
 function Footer() {
    return (
-
-         <footer
-            className='flex justify-center items-center min-h-[150] px-2 sm:px-3 md:px-4 lg:px-6 pt-4 sm:pt-5 md:pt-7 pb-6 sm:pb-8 md:pb-10 -mx-2 sm:-mx-3 md:-mx-4
+      <footer
+         className='flex justify-center items-center min-h-[150] px-2 sm:px-3 md:px-4 lg:px-6 pt-4 sm:pt-5 md:pt-7 pb-6 sm:pb-8 md:pb-10 -mx-2 sm:-mx-3 md:-mx-4
          lg:-mx-6 bg-[#fde4e4]'
-         >
-            <section className='flex flex-col justify-center items-stretch w-full h-full border-2 border-white[&_*]:border-[1px] [&_*]:border-red-500'>
-               <div className='flex flex-wrap justify-between items-start gap-y-5 [&>*]:w-[48%] md:[&>*:not(:first-child)]:w-[27%] [&>:first-child]:w-[15%]'>
-                  <section className='flex'>
-                     <div className='flex flex-col items-center'>
-                        <img
-                           src={logo}
-                           alt='Food Ordering Logo'
-                           className='w-10 h-10 sm:h-12 sm:w-12 lg:h-16 lg:w-16'
-                        />
-                        <h4 className='font-bold font-rnroll'>Tasty Treat</h4>
-                     </div>
-                  </section>
+      >
+         <section className='flex flex-col justify-center items-stretch w-full h-full '>
+            <div className='flex flex-wrap justify-between items-start gap-y-5 [&>*]:w-[48%] md:[&>*:not(:first-child)]:w-[27%] [&>:first-child]:w-[15%]'>
+               <section className='flex'>
+                  <div className='flex flex-col items-center'>
+                     <img
+                        src={logo}
+                        alt='Food Ordering Logo'
+                        className='w-10 h-10 sm:h-12 sm:w-12 lg:h-16 lg:w-16'
+                     />
+                     <h4 className='font-bold font-rnroll'>Tasty Treat</h4>
+                  </div>
+               </section>
 
-                  <section>
-                     <h3 className='text-[18px] font-bold font-rnroll'>
-                        Delivery Time
-                     </h3>
-                     <h4 className='mt-1 font-bold sm:mt-2 md:mt-3'>
-                        Sunday - Thursday
-                     </h4>
-                     <p className='leading-4'>10:00am - 11:00pm</p>
-                     <h4 className='mt-1 font-bold sm:mt-2 md:mt-3'>
-                        Friday - Saturday
-                     </h4>
-                     <p className='leading-4'>Off day</p>
-                  </section>
-                  <section>
-                     <h3 className='text-[18px] font-bold font-rnroll'>
-                        Contact
-                     </h3>
-                     <h4 className='mt-1 sm:mt-2 md:mt-3'>
-                        Location: 3 Armada Way, London, UK{' '}
-                     </h4>
-                     <h4 className='mt-1 font-bold sm:mt-2 md:mt-3'>
-                        Phone: 028 847 3329
-                     </h4>
-                     <h4 className='mt-1 font-bold sm:mt-2 md:mt-3'>
-                        Email: example@gmail.com
-                     </h4>
-                  </section>
-                  <section>
-                     <h3 className='text-[18px] font-bold font-rnroll'>
-                        Newsletter
-                     </h3>
-                     <h4 className='mt-1 sm:mt-2 md:mt-3'>
-                        Subscribe our newsletter
-                     </h4>
-                     <div className='flex justify-between gap-2 min-h-[42px] p-1 rounded-sm border-[1px] border-black bg-white'>
-                        <input
-                           type='text'
-                           placeholder='Enter your email'
-                           className='w-full px-1 text-[15px] sm:text-[18px] capitalize outline-none'
-                        />
-                        <button className='flex items-center justify-center text-white h-[38px] w-[45px] md:w-[50px] rounded-sm bg-red-500'>
+               <section>
+                  <h3 className='text-[18px] font-bold font-rnroll'>
+                     Delivery Time
+                  </h3>
+                  <h4 className='mt-1 font-bold sm:mt-2 md:mt-3'>
+                     Sunday - Thursday
+                  </h4>
+                  <p className='leading-4'>10:00am - 11:00pm</p>
+                  <h4 className='mt-1 font-bold sm:mt-2 md:mt-3'>
+                     Friday - Saturday
+                  </h4>
+                  <p className='leading-4'>Off day</p>
+               </section>
+               <section>
+                  <h3 className='text-[18px] font-bold font-rnroll'>Contact</h3>
+                  <h4 className='mt-1 sm:mt-2 md:mt-3'>
+                     Location: 3 Armada Way, London, UK{' '}
+                  </h4>
+                  <h4 className='mt-1 font-bold sm:mt-2 md:mt-3'>
+                     Phone: 028 847 3329
+                  </h4>
+                  <h4 className='mt-1 font-bold sm:mt-2 md:mt-3'>
+                     Email: example@gmail.com
+                  </h4>
+               </section>
+               <section>
+                  <h3 className='text-[18px] font-bold font-rnroll'>
+                     Newsletter
+                  </h3>
+                  <h4 className='mt-1 sm:mt-2 md:mt-3'>
+                     Subscribe our newsletter
+                  </h4>
+                  <div className='flex justify-between gap-2 min-h-[42px] p-1 rounded-sm border-[1px] border-black bg-white'>
+                     <input
+                        type='text'
+                        placeholder='Enter your email'
+                        className='w-full px-1 text-[15px] sm:text-[18px] capitalize outline-none'
+                     />
+                     <button className='flex items-center justify-center text-white h-[38px] w-[45px] sm:w-[80px] rounded-sm bg-red-500'>
+                        <Link to='#'>
                            <TbSend />
-                        </button>
-                     </div>
-                     <div className='flex items-center justify-start gap-2 mt-1 sm:gap-3 lg:gap-4 sm:mt-2 md:mt-3'>
-                        <h4>Follow:</h4>
+                        </Link>
+                     </button>
+                  </div>
+                  <div className='flex items-center justify-start gap-2 mt-1 sm:gap-3 lg:gap-4 sm:mt-2 md:mt-3'>
+                     <h4>Follow:</h4>
 
-                        <div className='flex gap-2 sm:gap-3 lg:gap-4 '>
-                           <Link to='#'>
-                              <RiFacebookBoxLine className='text-xl md:text-2xl' />
-                           </Link>
-                           <Link to='#'>
-                              <RiInstagramLine className='text-xl md:text-2xl' />
-                           </Link>
-                           <Link to='#'>
-                              <RiYoutubeLine className='text-xl md:text-2xl' />
-                           </Link>
-                        </div>
+                     <div className='flex gap-2 sm:gap-3 lg:gap-4 '>
+                        <Link to='#'>
+                           <RiFacebookBoxLine className='text-xl md:text-2xl' />
+                        </Link>
+                        <Link to='#'>
+                           <RiInstagramLine className='text-xl md:text-2xl' />
+                        </Link>
+                        <Link to='#'>
+                           <RiYoutubeLine className='text-xl md:text-2xl' />
+                        </Link>
                      </div>
-                  </section>
-               </div>
-            </section>
-         </footer>
-
+                  </div>
+               </section>
+            </div>
+         </section>
+      </footer>
    );
 }
 
