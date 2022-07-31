@@ -17,9 +17,9 @@ import logo from '../../assets/images/res-logo.png';
  */
 function Footer() {
    return (
-      <footer>
-         <section
-            className='flex justify-center items-center min-h-[150] px-2 sm:px-3 md:px-4 lg:px-6 py-4 sm:py-5 md:py-7 -mx-2 sm:-mx-3 md:-mx-4
+
+         <footer
+            className='flex justify-center items-center min-h-[150] px-2 sm:px-3 md:px-4 lg:px-6 pt-4 sm:pt-5 md:pt-7 pb-6 sm:pb-8 md:pb-10 -mx-2 sm:-mx-3 md:-mx-4
          lg:-mx-6 bg-[#fde4e4]'
          >
             <section className='flex flex-col justify-center items-stretch w-full h-full border-2 border-white[&_*]:border-[1px] [&_*]:border-red-500'>
@@ -97,12 +97,8 @@ function Footer() {
                   </section>
                </div>
             </section>
-         </section>
-         <h3 className=' mt-4 text-center'>
-            Design from Muhibur Rahman. <br /> Copyright - 2022, Built by Eric
-            Pham.
-         </h3>
-      </footer>
+         </footer>
+
    );
 }
 
