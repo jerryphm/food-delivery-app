@@ -2,7 +2,12 @@ import React from 'react';
 import logo from '../../assets/images/res-logo.png';
 import { Link } from 'react-router-dom';
 import MainLinks from '../../router/MainLinks';
-import { RiUserLine, RiMenuLine, RiMenu3Line, RiShoppingBagLine } from 'react-icons/ri';
+import {
+   RiUserLine,
+   RiMenuLine,
+   RiMenu3Line,
+   RiShoppingBagLine,
+} from 'react-icons/ri';
 import ReactTooltip from 'react-tooltip';
 import { useState } from 'react';
 
@@ -12,10 +17,7 @@ function Header() {
       setShowMenu(!isShowMenu);
    };
    return (
-      <header
-         onClick={toggleMenu}
-         className='fixed top-0 right-0 left-0 flex justify-center'
-      >
+      <header className='fixed top-0 right-0 left-0 flex justify-center'>
          <nav className='flex justify-between items-center max-w-7xl w-full py-2 sm:py-4 lg:py-5 px-2 sm:px-3 md:px-4 lg:px-6 mx-auto bg-white'>
             <section className='flex flex-col items-center'>
                <img
@@ -53,11 +55,14 @@ function Header() {
                      </Link>
                   </div>
 
-                  <div onClick={toggleMenu} className='md:hidden text-2xl sm:text-3xl lg:text-4xl cursor-pointer'>
-                     {isShowMenu ?<RiMenu3Line /> :<RiMenuLine />}
+                  <div
+                     onClick={toggleMenu}
+                     className='md:hidden text-2xl sm:text-3xl lg:text-4xl cursor-pointer'
+                  >
+                     {isShowMenu ? <RiMenu3Line /> : <RiMenuLine />}
                   </div>
                   {isShowMenu ? (
-                     <MainLinks className='md:hidden fixed right-0 top-[72px] sm:top-[96px] flex flex-col items-end gap-10 w-fit min-w-[40vw] h-screen pt-14 pr-14 rounded-bl-md bg-white font-rnroll text-lg shadow-2xl' />
+                     <MainLinks toggleMenu={toggleMenu} className='md:hidden fixed z-10 right-0 top-[72px] sm:top-[96px] flex flex-col items-end gap-10 w-fit min-w-[40vw] h-screen pt-14 pr-14 rounded-bl-md bg-white font-rnroll text-lg shadow-2xl' />
                   ) : null}
                </div>
             </section>

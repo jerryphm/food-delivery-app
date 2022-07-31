@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-function MainLinks({className, onClick}) {
+function MainLinks({ className, toggleMenu }) {
    const { current: linkList } = useRef([
       { to: '/', display: 'Home' },
       { to: '/fooddetails', display: 'Foods' },
@@ -11,11 +11,14 @@ function MainLinks({className, onClick}) {
 
    const [path, setPath] = useState(window.location.pathname);
    return (
-      <div onClick={onClick} className={className}>
+      <div className={className}>
          {linkList.map(({ to, display }) => (
             <Link
-               onClick={() => setPath(to)}
-               className={path == to ?'text-red-500' : null}
+               onClick={() => {
+                  setPath(to);
+                  toggleMenu()
+               }}
+               className={path == to ? 'text-red-500' : null}
                key={to}
                to={to}
             >

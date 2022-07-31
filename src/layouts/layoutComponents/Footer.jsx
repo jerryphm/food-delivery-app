@@ -22,7 +22,7 @@ function Footer() {
          lg:-mx-6 bg-[#fde4e4]'
       >
          <section className='flex flex-col justify-center items-stretch w-full h-full '>
-            <div className='flex flex-wrap justify-between items-start gap-y-5 [&>*]:w-[48%] md:[&>*:not(:first-child)]:w-[27%] [&>:first-child]:w-[15%]'>
+            <div className='flex flex-wrap justify-between items-start gap-y-5 [&>*]:w-[48%] md:[&>*:not(:first-child)]:w-[27%] md:[&>:first-child]:w-[15%]'>
                <section className='flex'>
                   <div className='flex flex-col items-center'>
                      <img
@@ -50,13 +50,22 @@ function Footer() {
                <section>
                   <h3 className='text-[18px] font-bold font-rnroll'>Contact</h3>
                   <h4 className='mt-1 sm:mt-2 md:mt-3'>
-                     Location: 3 Armada Way, London, UK{' '}
+                     <span className='mt-1 font-bold sm:mt-2 md:mt-3'>
+                        Location
+                     </span>
+                     : 3 Armada Way, London, UK
                   </h4>
-                  <h4 className='mt-1 font-bold sm:mt-2 md:mt-3'>
-                     Phone: 028 847 3329
+                  <h4>
+                     <span className='mt-1 font-bold sm:mt-2 md:mt-3'>
+                        Phone
+                     </span>
+                     : 028 847 3329
                   </h4>
-                  <h4 className='mt-1 font-bold sm:mt-2 md:mt-3'>
-                     Email: example@gmail.com
+                  <h4>
+                     <span className='mt-1 font-bold sm:mt-2 md:mt-3'>
+                        Email
+                     </span>
+                     : example@gmail.com
                   </h4>
                </section>
                <section>
