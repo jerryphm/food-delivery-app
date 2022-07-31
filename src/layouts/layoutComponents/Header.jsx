@@ -27,7 +27,7 @@ function Header() {
             </section>
 
             <section className='grow-[0.5] flex flex-row-reverse md:flex-row justify-between items-center'>
-               <MainLinks className='hidden md:grow-[0.6] md:flex md:justify-between md:text-lg md:items-center hover:[&>*]:text-red-500' />
+               <MainLinks className='hidden md:grow-[0.6] md:flex md:justify-between md:text-lg md:items-center hover:[&>*]:text-red-500 font-rnroll text-lg' />
                <div className='flex gap-4'>
                   <div className='flex gap-2'>
                      <RiShoppingBagLine
@@ -57,7 +57,7 @@ function Header() {
                      {isShowMenu ?<RiMenu3Line /> :<RiMenuLine />}
                   </div>
                   {isShowMenu ? (
-                     <MainLinks className='md:hidden fixed right-0 top-[72px] sm:top-[96px] flex flex-col items-end gap-6 w-fit min-w-[25vw] py-4 px-6 sm:px-8 border-l-2 border-b-2 border-red-500 rounded-bl-md bg-white' />
+                     <MainLinks className='md:hidden fixed right-0 top-[72px] sm:top-[96px] flex flex-col items-end gap-10 w-fit min-w-[40vw] h-screen pt-14 pr-14 rounded-bl-md bg-white font-rnroll text-lg shadow-2xl' />
                   ) : null}
                </div>
             </section>
