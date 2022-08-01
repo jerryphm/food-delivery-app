@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-function MainLinks({ className, toggleMenu }) {
+function MainLinks({ className, dispatch }) {
    const { current: linkList } = useRef([
       { to: '/', display: 'Home' },
       { to: '/fooddetails', display: 'Foods' },
@@ -16,7 +16,7 @@ function MainLinks({ className, toggleMenu }) {
             <Link
                onClick={() => {
                   setPath(to);
-                  if (toggleMenu) toggleMenu();
+                  if (dispatch) dispatch();
                }}
                className={`${
                   path == to ? 'text-red-500' : null

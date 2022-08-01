@@ -6,3 +6,4 @@ export { default as WhyChooseTasty } from './WhyChooseTasty';
 export { default as HotPizza } from './HotPizza';
 export { default as Testimonial } from './Testimonial';
 export { default as TestimonialSlider } from './TestimonialSlider';
+export { default as Cart } from './Cart';

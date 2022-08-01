@@ -8,7 +8,7 @@ import {
    WhyChooseTasty,
    HotPizza,
    Testimonial
-} from '../components/UI';
+} from '../components/home';
 
 function Home() {
    helmet('Home');
@@ -21,7 +21,7 @@ function Home() {
          <WhyChooseTasty />
          <HotPizza />
          <Testimonial />
-         <div className='h-28'></div>
+         <div className='test h-28'></div>
       </div>
    );
 }

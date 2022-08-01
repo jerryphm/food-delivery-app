@@ -1,7 +1,7 @@
 import React from 'react';
 import img from '../../assets/images/ava-3.jpg';
 import { useDispatch } from 'react-redux';
-import { addItems } from '../../store/shoppingCart/cartSlice';
+import { addItem } from '../../store/shoppingCart/cartSlice';
 
 function ProductCard({ id, title, price, imgUrl01, imgUrl02 }) {
    let imgUrl = imgUrl01 ? imgUrl01 : imgUrl02;
@@ -23,7 +23,7 @@ function ProductCard({ id, title, price, imgUrl01, imgUrl02 }) {
                </span>
                <button
                   onClick={() =>
-                     cartDispatch(addItems({ id, title, price, imgUrl }))
+                     cartDispatch(addItem({ id, title, price, imgUrl }))
                   }
                   className='py-1 px-2 sm:py-1 sm:px-3 rounded-md bg-red-500 text-white'
                >
