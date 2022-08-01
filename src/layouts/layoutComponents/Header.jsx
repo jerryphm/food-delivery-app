@@ -9,6 +9,7 @@ import {
    RiShoppingBagLine,
 } from 'react-icons/ri';
 import ReactTooltip from 'react-tooltip';
+import { useSelector } from 'react-redux';
 
 function Header() {
    const [isShowMenu, setShowMenu] = useState(false);
@@ -16,9 +17,12 @@ function Header() {
       setShowMenu(!isShowMenu);
    };
 
+   const cartTotalQuantity = useSelector(
+      (state) => state.cart.cartTotalQuantity
+   );
    return (
-      <header className='z-10 fixed top-0 right-0 left-0 flex justify-center'>
-         <nav className='flex justify-between items-center max-w-7xl w-full py-2 sm:py-4 lg:py-5 px-2 sm:px-3 md:px-4 lg:px-6 mx-auto bg-white'>
+      <header className='z-[999] fixed top-0 right-0 left-0 flex justify-center'>
+         <nav className='flex justify-between items-center max-w-7xl w-full py-1 sm:py-2 px-2 sm:px-3 md:px-4 lg:px-6 mx-auto bg-white'>
             <section className='flex flex-col items-center'>
                <Link to='/'>
                   <img
@@ -34,10 +38,20 @@ function Header() {
                <MainLinks className='hidden md:grow-[0.6] md:flex md:justify-between md:text-lg md:items-center hover:[&>*]:text-red-500 font-rnroll text-lg' />
                <div className='flex gap-4'>
                   <div className='flex gap-2'>
-                     <RiShoppingBagLine
-                        data-tip='Your Cart'
-                        className='text-2xl sm:text-3xl lg:text-4xl cursor-pointer'
-                     />
+                     <div
+                        before={cartTotalQuantity}
+                        className={
+                           cartTotalQuantity !== 0
+                              ? 'relative before:content-[attr(before)] before:absolute before:top-[-3px] before:right-[-5px] before:h-5 before:w-5  text-center before:bg-red-500 before:rounded-full before:text-white font-rnroll leading-[1] text-[15px] before:pt-[1px] before:cursor-pointer'
+                              : null
+                        }
+                     >
+                        <RiShoppingBagLine
+                           before={'hello'}
+                           className='text-2xl sm:text-3xl lg:text-4xl cursor-pointer '
+                           data-tip='Your Cart'
+                        />
+                     </div>
                      <ReactTooltip
                         effect='solid'
                         place='bottom'

@@ -1,7 +1,6 @@
 import React from 'react';
 import { pizzaProducts } from '../../assets/data/products';
 import { ProductCard } from '../shared';
-console.log(pizzaProducts);
 
 function HotPizza() {
    return (
@@ -12,10 +11,11 @@ function HotPizza() {
          <div className='flex flex-wrap gap-x-[4%] sm:gap-x-[5%] lg:gap-x-[2.66666667%] gap-y-4 mt-10'>
             {pizzaProducts.map(({ id, title, price, imgUrl02 }) => (
                <ProductCard
-                  key={id}
-                  title={title}
-                  price={price}
-                  imgUrl02={imgUrl02}
+               title={title}
+               price={price}
+               imgUrl02={imgUrl02}
+               id={id}
+               key={id}
                />
             ))}
          </div>

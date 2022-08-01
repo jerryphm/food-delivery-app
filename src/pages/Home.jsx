@@ -13,7 +13,7 @@ import {
 function Home() {
    helmet('Home');
    return (
-      <div>
+      <div className='home'>
          <Hero />
          <Category />
          <Features />

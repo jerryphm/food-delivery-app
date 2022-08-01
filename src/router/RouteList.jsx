@@ -15,11 +15,7 @@ function RouteList() {
          />
       );
    }
-   return (
-      <div className='mt-[72px] sm:mt-[96px]'>
-         <Routes>{routesArr}</Routes>
-      </div>
-   );
+   return <Routes>{routesArr}</Routes>;
 }
 
 export default RouteList;

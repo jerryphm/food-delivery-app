@@ -66,7 +66,9 @@ function PopularFoods() {
                   title={title}
                   price={price}
                   imgUrl01={imgUrl01}
+                  id={id}
                   key={id}
+               
                />
             ))}
          </div>
