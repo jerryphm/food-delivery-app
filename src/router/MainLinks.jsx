@@ -16,7 +16,7 @@ function MainLinks({ className, toggleMenu }) {
             <Link
                onClick={() => {
                   setPath(to);
-                  toggleMenu();
+                  if (toggleMenu) toggleMenu();
                }}
                className={`${
                   path == to ? 'text-red-500' : null
