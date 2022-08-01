@@ -6,7 +6,8 @@ import {
    Features,
    PopularFoods,
    WhyChooseTasty,
-   HotPizza
+   HotPizza,
+   Testimonial
 } from '../components/UI';
 
 function Home() {
@@ -19,6 +20,7 @@ function Home() {
          <PopularFoods />
          <WhyChooseTasty />
          <HotPizza />
+         <Testimonial />
          <div className='h-28'></div>
       </div>
    );

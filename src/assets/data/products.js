@@ -23,6 +23,12 @@ import product_06_image_01 from '../images/bread(1).png';
 import product_06_image_02 from '../images/bread(2).png';
 import product_06_image_03 from '../images/bread(3).png';
 
+//avatar
+import ava1 from '../images/ava-1.jpg';
+import ava2 from '../images/ava-2.jpg';
+import ava3 from '../images/ava-3.jpg';
+import ava4 from '../images/ava-4.jpg';
+
 export const products = [
    {
       id: '01',
@@ -189,3 +195,38 @@ export const burgerProducts = products.filter(
 export const pizzaProducts = products.filter(
    (product) => product.category == 'Pizza'
 );
+
+export const feedbacks = [
+   {
+      id: 1,
+      name: 'Biff Wellington',
+      location: 'Fort William, UK',
+      avatar: ava1,
+      feedback:
+         ' Consistently great pizza with great variety of toppings and styles. Service is fast too. Can’t go wrong with this place.',
+   },
+   {
+      id: 2,
+      name: 'Isha Keila',
+      location: 'Fort William, UK',
+      avatar: ava2,
+      feedback:
+         'Visited here with the family and enjoyed the burgers we had. The £14.95 deal of a burger, chips and a drink was good value. The restaurant is quite small, and the staff quite friendly',
+   },
+   {
+      id: 3,
+      name: 'Mike Stand',
+      location: 'Rimswell, UK',
+      avatar: ava3,
+      feedback:
+         'Very good, clean, prompt service! Nice choice of foods! Good prices! I especially liked the buffalo offering! Drink selection was good also!',
+   },
+   {
+      id: 4,
+      name: 'Mona Lott',
+      location: 'Langley Green, UK',
+      avatar: ava4,
+      feedback:
+         'The pizza here is real amazing and would recommend trying these guys out. They have a great toppings selections and great prices on a single sliced.',
+   },
+];

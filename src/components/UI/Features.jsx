@@ -26,7 +26,6 @@ const featureData = [
 function Features() {
    return (
       <div className='my-10'>
-      
          <section className='text-center font-rnroll font-bold '>
             <h3 className='text-red-500 md:text-lg'>What we serve</h3>
             <h2 className='text-2xl mb-3'>
@@ -38,9 +37,15 @@ function Features() {
          <section className='flex flex-col sm:flex-row items-center gap-3 sm:gap-7 mt-8'>
             {featureData.map((feature, i) => (
                <div key={i} className='flex flex-col items-center'>
-                  <img className='h-[60px] w-[60px]' src={feature.imgUrl} alt='feature image' />
+                  <img
+                     className='h-[60px] w-[60px]'
+                     src={feature.imgUrl}
+                     alt='feature image'
+                  />
                   <h3 className='font-rnroll'>{feature.display}</h3>
-                  <p className='text-center max-w-[40ch] opacity-90'>{feature.description}</p>
+                  <p className='text-center max-w-[40ch] opacity-90'>
+                     {feature.description}
+                  </p>
                </div>
             ))}
          </section>
