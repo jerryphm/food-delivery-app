@@ -39,7 +39,7 @@ function WhyChooseTasty() {
             <div>
                <h4 className='font-rnroll text-[16px]'>
                   <RiCheckboxCircleLine className='inline-block text-red-500 mr-1 -translate-y-[1px]' />
-                  Order from location
+                  Order from any location
                </h4>
                <p className='opacity-90'>
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.

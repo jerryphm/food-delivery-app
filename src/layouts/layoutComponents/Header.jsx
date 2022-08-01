@@ -1,7 +1,7 @@
-import React from 'react';
-import logo from '../../assets/images/res-logo.png';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import MainLinks from '../../router/MainLinks';
+import logo from '../../assets/images/res-logo.png';
 import {
    RiUserLine,
    RiMenuLine,
@@ -9,22 +9,24 @@ import {
    RiShoppingBagLine,
 } from 'react-icons/ri';
 import ReactTooltip from 'react-tooltip';
-import { useState } from 'react';
 
 function Header() {
    const [isShowMenu, setShowMenu] = useState(false);
    const toggleMenu = () => {
       setShowMenu(!isShowMenu);
    };
+
    return (
       <header className='z-10 fixed top-0 right-0 left-0 flex justify-center'>
          <nav className='flex justify-between items-center max-w-7xl w-full py-2 sm:py-4 lg:py-5 px-2 sm:px-3 md:px-4 lg:px-6 mx-auto bg-white'>
             <section className='flex flex-col items-center'>
-               <img
-                  src={logo}
-                  alt='Food Ordering Logo'
-                  className='h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12'
-               />
+               <Link to='/'>
+                  <img
+                     src={logo}
+                     alt='Food Ordering Logo'
+                     className='h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12'
+                  />
+               </Link>
                <h4 className='font-bold font-rnroll'>Tasty Treat</h4>
             </section>
 
@@ -62,7 +64,10 @@ function Header() {
                      {isShowMenu ? <RiMenu3Line /> : <RiMenuLine />}
                   </div>
                   {isShowMenu ? (
-                     <MainLinks toggleMenu={toggleMenu} className='md:hidden fixed right-0 top-[72px] sm:top-[96px] flex flex-col items-end gap-10 w-fit min-w-[40vw] h-screen pt-14 rounded-bl-md bg-white font-rnroll shadow-2xl' />
+                     <MainLinks
+                        toggleMenu={toggleMenu}
+                        className='md:hidden fixed right-0 top-[72px] sm:top-[96px] flex flex-col items-end gap-10 w-fit min-w-[40vw] h-screen pt-14 rounded-bl-md bg-white font-rnroll shadow-2xl'
+                     />
                   ) : null}
                </div>
             </section>

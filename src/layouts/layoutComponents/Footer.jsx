@@ -19,7 +19,7 @@ function Footer() {
    return (
       <footer
          className='flex justify-center items-center min-h-[150] px-2 sm:px-3 md:px-4 lg:px-6 pt-4 sm:pt-5 md:pt-7 pb-6 sm:pb-8 md:pb-10 -mx-2 sm:-mx-3 md:-mx-4
-         lg:-mx-6 bg-[#fde4e4]'
+         lg:-mx-6 bg-lpink'
       >
          <section className='flex flex-col justify-center items-stretch w-full h-full '>
             <div className='flex flex-wrap justify-between items-start gap-y-5 [&>*]:w-[48%] md:[&>*:not(:first-child)]:w-[27%] md:[&>:first-child]:w-[15%]'>
@@ -92,13 +92,13 @@ function Footer() {
 
                      <div className='flex gap-2 sm:gap-3 lg:gap-4 '>
                         <Link to='#'>
-                           <RiFacebookBoxLine className='text-xl md:text-2xl' />
+                           <RiFacebookBoxLine className=' text-red-500 text-xl md:text-2xl' />
                         </Link>
                         <Link to='#'>
-                           <RiInstagramLine className='text-xl md:text-2xl' />
+                           <RiInstagramLine className=' text-red-500 text-xl md:text-2xl' />
                         </Link>
                         <Link to='#'>
-                           <RiYoutubeLine className='text-xl md:text-2xl' />
+                           <RiYoutubeLine className=' text-red-500 text-xl md:text-2xl' />
                         </Link>
                      </div>
                   </div>
