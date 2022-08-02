@@ -1,8 +1,11 @@
 import React from 'react'
+import { CommonBanner } from '../components/shared'
 
 function AllFoods() {
   return (
-    <div>AllFoods</div>
+    <div>
+      <CommonBanner>all</CommonBanner>
+    </div>
   )
 }
 

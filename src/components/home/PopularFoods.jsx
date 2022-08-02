@@ -40,13 +40,13 @@ function PopularFoods() {
          <h2 className='text-2xl mb-3 text-center font-rnroll font-bold '>
             Popular Foods
          </h2>
-         <div className='flex justify-center items-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 py-2 px-3 sm:py-3 sm:px-5 rounded-sm bg-red-500'>
+         <div className='flex justify-center items-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 py-2 px-3 sm:py-3 sm:px-5 rounded-sm bg-red-500 text-white'>
             {ppFoodsData.map((ppFood, i) => (
                <button
                   onClick={() => setCategory(ppFood.display)}
                   className={`${
                      category == ppFood.display ? 'bg-white text-red-500' : null
-                  } flex gap-1 items-center w-fit rounded-sm py-1 px-2 sm:px-3 text-white`}
+                  } flex gap-1 items-center w-fit rounded-sm py-1 px-2 sm:px-3`}
                   key={i}
                >
                   {ppFood.imgUrl ? (
@@ -56,7 +56,7 @@ function PopularFoods() {
                         alt='Popular food img'
                      />
                   ) : null}
-                  <span>{ppFood.display}</span>
+                  <span className=''>{ppFood.display}</span>
                </button>
             ))}
          </div>
@@ -68,7 +68,6 @@ function PopularFoods() {
                   imgUrl01={imgUrl01}
                   id={id}
                   key={id}
-               
                />
             ))}
          </div>

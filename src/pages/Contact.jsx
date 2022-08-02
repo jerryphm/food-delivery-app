@@ -1,11 +1,14 @@
 import React from 'react'
+import { CommonBanner } from '../components/shared'
 import {helmet} from '../helmet'
 
 
 function Contact() {
   helmet('Contact')
   return (
-    <div className='min-h-screen w-screen bg-red-500 text-bold text-white flex justify-center items-center'>Contact</div>
+    <div>
+<CommonBanner />
+    </div>
   )
 }
 

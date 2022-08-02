@@ -1,8 +1,11 @@
 import React from 'react'
+import { CommonBanner } from '../components/shared'
 
 function Checkout() {
   return (
-    <div>Checkout</div>
+    <div>
+      <CommonBanner />
+    </div>
   )
 }
 
