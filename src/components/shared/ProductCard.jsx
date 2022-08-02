@@ -7,7 +7,7 @@ function ProductCard({ id, title, price, imgUrl01, imgUrl02 }) {
    let imgUrl = imgUrl01 ? imgUrl01 : imgUrl02;
    const cartDispatch = useDispatch();
    return (
-      <div className='flex flex-col items-center justify-between w-[48%] sm:w-[30%] lg:w-[23%] border-[1px] border-lpink rounded-sm overflow-hidden'>
+      <div className='flex flex-col items-center justify-between max-h-[210px] sm:max-h-60 lg:max-h-[280px] w-[48%] sm:w-[30%] lg:w-[23%] border-[1px] border-lpink rounded-sm overflow-hidden'>
          <div className='py-3 sm:py-4 lg:py-6'>
             <img
                src={imgUrl}

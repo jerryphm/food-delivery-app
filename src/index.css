@@ -6,6 +6,15 @@
 
 @layer base {
    html {
-   color: #212245
+      color: #212245;
+   }
+   ::-webkit-input-placeholder {
+      font-weight: 800;
+   }
+   ::-moz-placeholder {
+      font-weight: 800;
+   }
+   :-ms-input-placeholder {
+      font-weight: 800;
    }
 }
