@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function MainLinks({ className, dispatch }) {
    const { current: linkList } = useRef([
       { to: '/', display: 'Home' },
-      { to: '/fooddetails', display: 'Foods' },
+      { to: '/allfoods', display: 'Foods' },
       { to: '/cart', display: 'Cart' },
       { to: '/contact', display: 'Contact' },
    ]);

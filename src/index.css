@@ -9,12 +9,12 @@
       color: #212245;
    }
    ::-webkit-input-placeholder {
-      font-weight: 800;
+      font-weight: 600;
    }
    ::-moz-placeholder {
-      font-weight: 800;
+      font-weight: 600;
    }
    :-ms-input-placeholder {
-      font-weight: 800;
+      font-weight: 600;
    }
 }
