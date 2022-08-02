@@ -9,14 +9,8 @@ function HotPizza() {
             Hot Pizza
          </h2>
          <div className='flex flex-wrap gap-x-[4%] sm:gap-x-[5%] lg:gap-x-[2.66666667%] gap-y-4 mt-10'>
-            {pizzaProducts.map(({ id, title, price, imgUrl02 }) => (
-               <ProductCard
-               title={title}
-               price={price}
-               imgUrl02={imgUrl02}
-               id={id}
-               key={id}
-               />
+            {pizzaProducts.map((product) => (
+               <ProductCard product={product} key={product.id} />
             ))}
          </div>
       </section>

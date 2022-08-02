@@ -10,7 +10,7 @@ import ReactPaginate from 'react-paginate';
 
 helmet('Foods');
 let items = [];
-function FoodDetails() {
+function AllFoods() {
    const [draftSearchTerm, setDraftSearchTerm] = useState('');
    const handleSearch = () => {
       let searchTerm = '';
@@ -25,17 +25,11 @@ function FoodDetails() {
       return renderedProducts;
    };
    const renderedProducts = draftSearchTerm ? handleSearch() : products;
-
+   console.log('renderedProducts: ', renderedProducts);
    //separate component vs react-paginate. provide product card array for react-paginate:
-   const innerItems = renderedProducts.map(({ id, title, price, imgUrl01 }) => (
-      <ProductCard
-         title={title}
-         price={price}
-         imgUrl01={imgUrl01}
-         id={id}
-         key={id}
-      />
-   ));
+   const innerItems = renderedProducts.map((product) => {
+      return <ProductCard product={product} />;
+   });
    items = innerItems;
 
    return (
@@ -141,4 +135,4 @@ function PaginatedItems({ itemsPerPage, isSearching }) {
 function Items({ currentItems }) {
    return <>{currentItems}</>;
 }
-export default FoodDetails;
+export default AllFoods;

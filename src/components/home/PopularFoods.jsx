@@ -61,13 +61,10 @@ function PopularFoods() {
             ))}
          </div>
          <div className='flex flex-wrap gap-x-[4%] sm:gap-x-[5%] lg:gap-x-[2.66666667%] gap-y-4 mt-10'>
-            {getRelProducts().map(({ id, title, price, imgUrl01 }) => (
+            {getRelProducts().map((product) => (
                <ProductCard
-                  title={title}
-                  price={price}
-                  imgUrl01={imgUrl01}
-                  id={id}
-                  key={id}
+                  product={product}
+                  key={product.id}
                />
             ))}
          </div>

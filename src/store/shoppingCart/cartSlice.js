@@ -15,25 +15,20 @@ const cartSlice = createSlice({
          );
 
          const isNew = !existingItem;
-         const { id, title, price, imgUrl, category } = newItem;
 
          if (isNew) {
             state.cartItems.unshift({
                itemTotalQuantity: 1,
-               itemTotalPrice: price,
-               id,
-               title,
-               price,
-               imgUrl,
-               category,
+               itemTotalPrice: newItem.price,
+               ...newItem
             });
          } else {
             existingItem.itemTotalQuantity++;
-            existingItem.itemTotalPrice += price;
+            existingItem.itemTotalPrice += newItem.price;
          }
 
          state.cartTotalQuantity++;
-         state.cartTotalPrice += price;
+         state.cartTotalPrice += newItem.price;
       },
       removeItem(state, action) {
          const idPload = action.payload;

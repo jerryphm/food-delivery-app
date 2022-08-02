@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import MainLinks from '../../router/MainLinks';
+import MainLinksComp from '../../router/MainLinksComp';
 import logo from '../../assets/images/res-logo.png';
 import {
    RiUserLine,
@@ -50,7 +50,7 @@ function Header() {
             </section>
 
             <nav className='grow-[0.5] flex flex-row-reverse md:flex-row justify-between items-center'>
-               <MainLinks className='mark-main-links hidden md:grow-[0.6] md:flex md:justify-between md:text-lg md:items-center hover:[&>*]:text-red-500 font-rnroll text-lg' />
+               <MainLinksComp className='mark-main-links hidden md:grow-[0.6] md:flex md:justify-between md:text-lg md:items-center hover:[&>*]:text-red-500 font-rnroll text-lg' />
                <div className='mark-sub-links flex gap-2'>
                   <div className='relative'>
                      <RiShoppingBagLine
@@ -82,7 +82,7 @@ function Header() {
          {/* render menubar */}
          {isShowMenu ? (
             <>
-               <MainLinks
+               <MainLinksComp
                   dispatch={handleDispatchShowMenu}
                   className='md:hidden fixed right-0 top-[64px] sm:top-[80px] flex flex-col items-end gap-10 w-fit min-w-[40vw] h-screen pt-14 rounded-bl-md bg-white font-rnroll shadow-2xl'
                />
