@@ -91,19 +91,28 @@ function AllFoods() {
             </div>
          </div>
          <div className='relative flex flex-wrap gap-x-[4%] sm:gap-x-[5%] lg:gap-x-[2.66666667%] gap-y-4 h-[520px] sm:h-[560px] lg:h-[370px] mt-10 pb-[95px]'>
-            <PaginatedItems
-               itemsPerPage={4}
-               isSearching={draftSearchTerm}
-               isSorting={sortRule}
-            />
             {renderedProducts.length == 0 ? (
-               <div className='flex items-center justify-center font-rnroll w-full h-[183px] sm:h-[205px] md:h-[221px] lg:h-[253px] sm:text-lg'>
-                  <span className='max-w-[30ch] sm:max-w-full text-center'>
-                     Couldn't find your food, please try again
-                     <TbMoodSad className='inline ml-2' />
-                  </span>
-               </div>
-            ) : null}
+               <>
+                  <div className='flex items-center justify-center font-rnroll w-full h-[183px] sm:h-[205px] md:h-[221px] lg:h-[253px] sm:text-lg'>
+                     <span className='max-w-[30ch] sm:max-w-full text-center'>
+                        Couldn't find your food, please try again
+                        <TbMoodSad className='inline ml-2' />
+                     </span>
+                  </div>
+                  <ul class='absolute right-0 left-0 bottom-0 flex items-center justify-center gap-5 mx-auto mt-3 mb-9 opacity-40'>
+                     <li class='rounded-sm bg-red-500 text-white font-rnroll'>
+                        <a class='px-3 py-1 font-rnroll'>1</a>
+                     </li>
+                     
+                  </ul>
+               </>
+            ) : (
+               <PaginatedItems
+                  itemsPerPage={4}
+                  isSearching={draftSearchTerm}
+                  isSorting={sortRule}
+               />
+            )}
          </div>
       </div>
    );
@@ -112,26 +121,21 @@ function AllFoods() {
 //// react-paginate's code
 
 function PaginatedItems({ itemsPerPage, isSearching, isSorting }) {
+   console.log(items);
    // start with an empty list of items.
    const [currentItems, setCurrentItems] = useState(null);
    const [pageCount, setPageCount] = useState(0);
 
    const [itemOffset, setItemOffset] = useState(0);
    let reduceCompReRenderTrick;
+   console.log(isSearching);
 
    useMemo(() => {
-      if (isSearching) {
-         const endOffset = 0 + itemsPerPage;
-         setCurrentItems(items.slice(0, endOffset));
-         setPageCount(Math.ceil(items.length / itemsPerPage));
-         reduceCompReRenderTrick = true;
-      } else {
-         const endOffset = itemOffset + itemsPerPage;
-         setCurrentItems(items.slice(itemOffset, endOffset));
-         setPageCount(Math.ceil(items.length / itemsPerPage));
-         reduceCompReRenderTrick = true;
-      }
-   }, [isSorting, isSearching, itemOffset, itemsPerPage]);
+      const endOffset = itemOffset + itemsPerPage;
+      setCurrentItems(items.slice(itemOffset, endOffset));
+      setPageCount(Math.ceil(items.length / itemsPerPage));
+      reduceCompReRenderTrick = true;
+   }, [isSearching, isSorting, itemOffset, itemsPerPage]);
 
    // prevent component re-render
    if (reduceCompReRenderTrick) return;
