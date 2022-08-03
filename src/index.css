@@ -8,15 +8,6 @@
    html {
       color: #212245;
    }
-   ::-webkit-input-placeholder {
-      font-weight: 600;
-   }
-   ::-moz-placeholder {
-      font-weight: 600;
-   }
-   :-ms-input-placeholder {
-      font-weight: 600;
-   }
    tr,
    th,
    td {
@@ -24,5 +15,8 @@
    }
    table {
       border-collapse: collapse;
+   }
+   input {
+      width: 100%;
    }
 }
