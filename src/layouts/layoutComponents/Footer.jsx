@@ -8,13 +8,7 @@ import {
 import { Link } from 'react-router-dom';
 
 import logo from '../../assets/images/res-logo.png';
-/**
- * 
- * --a: #df2020;
-   --b: #212245;
-   --c: #fde4e4;
-   --d: #fcfcfc;
- */
+
 function Footer() {
    return (
       <footer
@@ -75,18 +69,24 @@ function Footer() {
                   <h4 className='mt-1 sm:mt-2 md:mt-3'>
                      Subscribe our newsletter
                   </h4>
-                  <div className='flex justify-between gap-2 min-h-[42px] p-1 rounded-sm border-[1px] border-black bg-white'>
+                  <form className='flex justify-between gap-2 min-h-[42px] p-1 rounded-sm border-[1px] border-black bg-white'>
                      <input
-                        type='text'
+                        type='email'
                         placeholder='Enter your email'
+                        required
+                        pattern="^[a-zA-Z0-9.! #$%&'*+/=? ^_`{|}~-]+@[a-zA-Z0-9-]+(?:\. [a-zA-Z0-9-]+)*$"
                         className='w-full px-1 text-[15px] sm:text-[18px] capitalize outline-none'
                      />
-                     <button className='flex items-center justify-center text-white h-[38px] w-[45px] sm:w-[80px] rounded-sm bg-red-500'>
+                     <button
+                        type='submit'
+                        value='newsletterSubmit'
+                        className='flex items-center justify-center text-white h-[38px] w-[45px] sm:w-[80px] rounded-sm bg-red-500'
+                     >
                         <Link to='#'>
                            <TbSend />
                         </Link>
                      </button>
-                  </div>
+                  </form>
                   <div className='flex items-center justify-start gap-2 mt-1 sm:gap-3 lg:gap-4 sm:mt-2 md:mt-3'>
                      <h4>Follow:</h4>
 

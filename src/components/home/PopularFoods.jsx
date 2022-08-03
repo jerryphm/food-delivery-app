@@ -36,7 +36,7 @@ function PopularFoods() {
    };
 
    return (
-      <section>
+      <section id='popularFoods'>
          <h2 className='text-2xl mb-3 text-center font-rnroll font-bold '>
             Popular Foods
          </h2>

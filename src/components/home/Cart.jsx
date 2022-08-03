@@ -1,14 +1,13 @@
 import React from 'react';
-import { Modal } from '../shared';
-import { useSelector} from 'react-redux';
-import CartItem from './CartItem';
 import { Link } from 'react-router-dom';
+import { Modal } from '../shared';
+import { useSelector } from 'react-redux';
+import CartItem from './CartItem';
 
-function Cart({dispatch}) {
+function Cart({ dispatch }) {
    const { cartItems, cartTotalPrice, cartTotalQuantity } = useSelector(
       (state) => state.cart
    );
-   console.log(cartItems)
    return (
       <section>
          <div
@@ -17,16 +16,22 @@ function Cart({dispatch}) {
          >
             <div className='h-[55vh] overflow-y-scroll'>
                {cartItems.map((cartItem) => (
-                  <CartItem cartItem={cartItem} key={cartItem.id}/>
+                  <CartItem cartItem={cartItem} key={cartItem.id} />
                ))}
-               {cartItems[0] ?null :<p className='text-center mt-[10vh]'>You haven't ordered anything yet</p>}
+               {cartItems[0] ? null : (
+                  <p className='text-center mt-[10vh]'>
+                     You haven't ordered anything yet
+                  </p>
+               )}
             </div>
             <div className='flex items-center h-[7vh] pt-3 sm:pt-4 lg:pt-5'>
                <p className='basis-[80%] text-base'>
                   Total: <span>${cartTotalPrice}</span>
                </p>
                <button
-               onClick={dispatch} className='px-3 py-1 sm:px-4 md:px-5 md:py-2 lg:px-7 lg:py-[10px] rounded-md text-white bg-red-500'>
+                  onClick={dispatch}
+                  className='px-3 py-1 sm:px-4 md:px-5 md:py-2 lg:px-7 lg:py-[10px] rounded-md text-white bg-red-500'
+               >
                   <Link to='/checkout'>Checkout</Link>
                </button>
             </div>

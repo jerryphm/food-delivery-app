@@ -4,6 +4,7 @@ import { RiCarLine } from 'react-icons/ri';
 import { BiCheckShield } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 import heroImage from '../../assets/images/hero.png';
+import { Link as SmoothLink } from 'react-scroll';
 
 function Hero() {
    return (
@@ -21,13 +22,18 @@ function Hero() {
             </h1>
             <div className='flex gap-8 mb-4'>
                <button className='py-[7px] px-4 rounded-md bg-red-500 text-white'>
-                  <Link to='#'>
+                  <SmoothLink
+                     to='popularFoods'
+                     smooth={true}
+                     offset={-90}
+                     duration={350}
+                  >
                      Order now
                      <IoIosArrowForward className='inline-block' />
-                  </Link>
+                  </SmoothLink>
                </button>
                <button className='py-[7px] px-4 rounded-md border-[1px] border-red-500'>
-                  <Link to='#'>See all foods</Link>
+                  <Link to='/foods'>See all foods</Link>
                </button>
             </div>
             <div className='flex flex-col lg:flex-row items-center sm:items-start lg:text-lg opacity-[0.9]'>

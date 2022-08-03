@@ -10,7 +10,7 @@ import { useDispatch } from 'react-redux';
 
 function CartItem({ cartItem }) {
    const dispatch = useDispatch();
-   const { id, itemTotalQuantity, itemTotalPrice, title, imgUrl } = cartItem;
+   const { id, itemTotalQuantity, itemTotalPrice, title, imgUrl01 } = cartItem;
 
    return (
       <section
@@ -18,7 +18,7 @@ function CartItem({ cartItem }) {
          key={id}
       >
          <img
-            src={imgUrl}
+            src={imgUrl01}
             className='h-7 w-7 sm:h-9 sm:w-9 md:h-11 md:w-11 lg:h-14 lg:w-14 translate-y-2 sm:translate-y-1 md:translate-x-0'
             alt='product image'
          />
