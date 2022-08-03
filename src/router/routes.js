@@ -12,8 +12,8 @@ import { products } from '../assets/data/products';
 
 export const routesArr = [
    { id: 1, path: '/', isMain: true, display: 'Home', element: Home },
-   { id: 2, path: '/cart', isMain: true, display: 'Cart', element: Cart },
-   { id: 3, path: '/foods', isMain: true, display: 'Foods', element: AllFoods },
+   { id: 2, path: '/foods', isMain: true, display: 'Foods', element: AllFoods },
+   { id: 3, path: '/cart', isMain: true, display: 'Cart', element: Cart },
    {
       id: 4,
       path: '/checkout',

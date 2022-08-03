@@ -121,14 +121,14 @@ function AllFoods() {
 //// react-paginate's code
 
 function PaginatedItems({ itemsPerPage, isSearching, isSorting }) {
-   console.log(items);
+
    // start with an empty list of items.
    const [currentItems, setCurrentItems] = useState(null);
    const [pageCount, setPageCount] = useState(0);
 
    const [itemOffset, setItemOffset] = useState(0);
    let reduceCompReRenderTrick;
-   console.log(isSearching);
+
 
    useMemo(() => {
       const endOffset = itemOffset + itemsPerPage;

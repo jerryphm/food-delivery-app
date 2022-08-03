@@ -35,20 +35,19 @@ function Header() {
    return (
       <header className='fixed z-[999] top-0 right-0 left-0 flex justify-center'>
          <div className='flex justify-between items-center max-w-7xl w-full py-1 sm:py-2 px-2 sm:px-3 md:px-4 lg:px-6 mx-auto bg-white'>
-            <section className='mark-logo flex flex-col items-center'>
-               <Link
-                  onClick={isShowMenu ? handleDispatchShowMenu : null}
-                  to='/'
-               >
-                  <img
-                     src={logo}
-                     alt='Food Ordering Logo'
-                     className='h-8 w-8 sm:h-9 sm:w-9 lg:h-10 lg:w-10'
-                  />
-               </Link>
+            <Link
+               onClick={isShowMenu ? handleDispatchShowMenu : null}
+               to='/'
+               className='flex flex-col items-center'
+            >
+               <img
+                  src={logo}
+                  alt='Food Ordering Logo'
+                  className='h-8 w-8 sm:h-9 sm:w-9 lg:h-10 lg:w-10'
+               />
                <h4 className='font-bold font-rnroll'>Tasty Treat</h4>
-            </section>
-
+            </Link>
+            
             <nav className='grow-[0.5] flex flex-row-reverse md:flex-row justify-between items-center'>
                <MainLinksComp className='mark-main-links hidden md:grow-[0.6] md:flex md:justify-between md:text-lg md:items-center hover:[&>*]:text-red-500 font-rnroll text-lg' />
                <div className='mark-sub-links flex gap-2'>
