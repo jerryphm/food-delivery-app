@@ -10,11 +10,15 @@ import {
 import { useSelector, useDispatch } from 'react-redux';
 import { showMenuActs } from '../../store/menu/showMenuSlice';
 import { showCartActs } from '../../store/shoppingCart/showCartSlice';
+
+import { setActivePage } from '../../store/activePage/activePage';
+
 import { Cart } from '../../components/home';
 import { Modal } from '../../components/shared';
 
 function Header() {
    const dispatch = useDispatch();
+
    //showMenu slice:
    const handleDispatchShowMenu = () => {
       dispatch(showMenuActs.toggleShowMenu());
@@ -32,6 +36,9 @@ function Header() {
    const cartTotalQuantity = useSelector(
       (state) => state.cart.cartTotalQuantity
    );
+
+   //activePage slice: (set active state - red color for login)
+   const activePage = useSelector((state) => state.activePage.activePage);
    return (
       <header className='fixed z-[999] top-0 right-0 left-0 flex justify-center'>
          <div className='flex justify-between items-center max-w-7xl w-full py-1 sm:py-2 px-2 sm:px-3 md:px-4 lg:px-6 mx-auto bg-white'>
@@ -47,13 +54,12 @@ function Header() {
                />
                <h4 className='font-bold font-rnroll'>Tasty Treat</h4>
             </Link>
-            
+
             <nav className='grow-[0.5] flex flex-row-reverse md:flex-row justify-between items-center'>
                <MainLinksComp className='mark-main-links hidden md:grow-[0.6] md:flex md:justify-between md:text-lg md:items-center hover:[&>*]:text-red-500 font-rnroll text-lg' />
                <div className='mark-sub-links flex gap-2'>
-                  <div className='relative'>
+                  <div onClick={handleDispatchShowCart} className='relative'>
                      <RiShoppingBagLine
-                        onClick={handleDispatchShowCart}
                         className={`text-2xl sm:text-3xl lg:text-4xl cursor-pointer ${
                            isShowCart ? 'text-red-500' : ''
                         }`}
@@ -64,8 +70,15 @@ function Header() {
                         </span>
                      ) : null}
                   </div>
-                  <Link to='/login'>
-                     <RiUserLine className='text-2xl sm:text-3xl lg:text-4xl' />
+                  <Link
+                     onClick={() => dispatch(setActivePage('/login'))}
+                     to='/login'
+                  >
+                     <RiUserLine
+                        className={`text-2xl sm:text-3xl lg:text-4xl ${
+                           activePage == '/login' ? 'text-red-500' : ''
+                        }`}
+                     />
                   </Link>
                   <div
                      onClick={handleDispatchShowMenu}

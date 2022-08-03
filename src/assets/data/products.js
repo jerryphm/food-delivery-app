@@ -203,7 +203,7 @@ export const feedbacks = [
       location: 'Fort William, UK',
       avatar: ava1,
       feedback:
-         ' Consistently great pizza with great variety of toppings and styles. Service is fast too. Can’t go wrong with this place.',
+         'Consistently great pizza with great variety of toppings and styles. Service is fast too. Can’t go wrong with this place.',
    },
    {
       id: 2,

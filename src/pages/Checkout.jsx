@@ -24,7 +24,7 @@ function Checkout() {
             userLocation,
          },
       ];
-      console.log('Finish 90% yeah yeah',USER_CHECKOUT_INFO)
+      console.info('...successfully get USER_CHECKOUT_INFO',USER_CHECKOUT_INFO)
    };
 
    return (
@@ -70,7 +70,7 @@ function Checkout() {
                            type='submit'
                            className='px-3 py-1 sm:px-4 md:px-5 md:py-2 lg:px-7 lg:py-[10px] rounded-md mx-auto mt-3 text-white bg-red-500'
                         >
-                           Payment
+                           <Link to='/login' >Payment</Link>
                         </button>
                      </form>
                      <div className='grow-1 sm:w-auto px-3 py-1 rounded-sm bg-lpink'>
@@ -97,7 +97,7 @@ function Checkout() {
                </>
             ) : (
                <div className='flex flex-col items-center font-rnroll lg:text-xl'>
-                  <span>You haven't orderd anything yet</span>
+                  <span>You haven't ordered anything yet</span>
                   <button className='px-3 py-1 sm:px-4 md:px-5 md:py-2 lg:px-7 lg:py-[10px] rounded-md mt-8 text-white bg-red-500'>
                      <Link to='/foods'>Continue Shopping</Link>
                   </button>
