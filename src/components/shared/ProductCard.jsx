@@ -12,7 +12,10 @@ function ProductCard({ product }) {
       <div className='flex flex-col items-center justify-between max-h-[210px] sm:max-h-60 lg:max-h-[280px] w-[48%] sm:w-[30%] lg:w-[23%] border-[1px] border-lpink rounded-sm overflow-hidden'>
          <div className='w-full py-3 sm:py-4 lg:py-6 cursor-pointer'>
             <Link
-               onClick={() => dispatch(setActivePage('/foods'))}
+               onClick={() => {
+                  dispatch(setActivePage('/foods'));
+                  window.scrollTo(0, 0);
+               }}
                to={`/foods/${product.id}`}
             >
                <img

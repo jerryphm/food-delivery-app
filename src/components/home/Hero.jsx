@@ -1,5 +1,3 @@
-import { useDispatch, useSelector } from 'react-redux';
-
 import { BiCheckShield } from 'react-icons/bi';
 import { IoIosArrowForward } from 'react-icons/io';
 import { Link } from 'react-router-dom';
@@ -8,6 +6,7 @@ import { RiCarLine } from 'react-icons/ri';
 import { Link as SmoothLink } from 'react-scroll';
 import heroImage from '../../assets/images/hero.png';
 import { setActivePage } from '../../store/activePage/activePage';
+import { useDispatch } from 'react-redux';
 
 function Hero() {
    const dispatch = useDispatch();
