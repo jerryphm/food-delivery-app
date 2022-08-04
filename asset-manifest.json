@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/food-delivery-app/static/css/main.6d1c7e6c.css",
+    "main.js": "/food-delivery-app/static/js/main.71f92478.js",
+    "static/media/largeBanner.jpg": "/food-delivery-app/static/media/largeBanner.34cebb31cbb82cf6613f.jpg",
+    "static/media/mediumBanner.jpg": "/food-delivery-app/static/media/mediumBanner.9a40a03e7c48954ad15b.jpg",
+    "static/media/smallBanner.jpg": "/food-delivery-app/static/media/smallBanner.2337d32ebf50df47f9cb.jpg",
+    "static/media/network.png": "/food-delivery-app/static/media/network.7deb539d0303413c1704.png",
+    "static/media/product_4.3.jpg": "/food-delivery-app/static/media/product_4.3.2df1cebb0cf62346965c.jpg",
+    "static/media/hero.png": "/food-delivery-app/static/media/hero.e3ef74be66b8a37b4de8.png",
+    "static/media/ava-1.jpg": "/food-delivery-app/static/media/ava-1.c185d7723fe40ec46830.jpg",
+    "static/media/ava-3.jpg": "/food-delivery-app/static/media/ava-3.1442075049ece43143f2.jpg",
+    "static/media/location.png": "/food-delivery-app/static/media/location.c2a808618ecbf53c92bc.png",
+    "static/media/product_3.1.jpg": "/food-delivery-app/static/media/product_3.1.9c207cdf68c9700b11ce.jpg",
+    "static/media/product_2.2.jpg": "/food-delivery-app/static/media/product_2.2.4967c9cbe3fec366a31a.jpg",
+    "static/media/ava-2.jpg": "/food-delivery-app/static/media/ava-2.11e918c656d0c7851624.jpg",
+    "static/media/product_2.3.jpg": "/food-delivery-app/static/media/product_2.3.3914f9eb0c0b372910ea.jpg",
+    "static/media/product_4.2.jpg": "/food-delivery-app/static/media/product_4.2.e82e43e0a3fc5dab999e.jpg",
+    "static/media/product_4.1.jpg": "/food-delivery-app/static/media/product_4.1.3c8ecc492220a3922731.jpg",
+    "static/media/product_3.3.jpg": "/food-delivery-app/static/media/product_3.3.f482f459be92f0045d9a.jpg",
+    "static/media/ava-4.jpg": "/food-delivery-app/static/media/ava-4.5f15524f7b3f80a834df.jpg",
+    "static/media/product_3.2.jpg": "/food-delivery-app/static/media/product_3.2.ebcb16b50e4ef0060a5e.jpg",
+    "static/media/product_2.1.jpg": "/food-delivery-app/static/media/product_2.1.f15385546f60c8d0f0d9.jpg",
+    "static/media/product_01.3.jpg": "/food-delivery-app/static/media/product_01.3.3ca2e9753f9acf20ca46.jpg",
+    "static/media/product_01.1.jpg": "/food-delivery-app/static/media/product_01.1.2244bc02a3d347b6bdda.jpg",
+    "static/media/product_09.jpg": "/food-delivery-app/static/media/product_09.d21d528bedb9088bf89f.jpg",
+    "static/media/product_01.2.jpg": "/food-delivery-app/static/media/product_01.2.6be97a612b580d595585.jpg",
+    "static/media/product_04.jpg": "/food-delivery-app/static/media/product_04.f7c5294d0481fb12cc4c.jpg",
+    "static/media/product_08.jpg": "/food-delivery-app/static/media/product_08.efc6c71968cf3ffe817a.jpg",
+    "static/media/bread(2).png": "/food-delivery-app/static/media/bread(2).dd485726262fc6f94474.png",
+    "static/media/res-logo.png": "/food-delivery-app/static/media/res-logo.2f9021c4ef5fe532038e.png",
+    "static/media/bread(3).png": "/food-delivery-app/static/media/bread(3).e4b9fdd91579778ae4cc.png",
+    "static/media/bread(1).png": "/food-delivery-app/static/media/bread(1).2fbb5c91c696e21efcb6.png",
+    "static/media/happy-svgrepo-com.svg": "/food-delivery-app/static/media/happy-svgrepo-com.5c609a2608d685c8f81d3c2ed8c5850c.svg",
+    "index.html": "/food-delivery-app/index.html",
+    "main.6d1c7e6c.css.map": "/food-delivery-app/static/css/main.6d1c7e6c.css.map",
+    "main.71f92478.js.map": "/food-delivery-app/static/js/main.71f92478.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6d1c7e6c.css",
+    "static/js/main.71f92478.js"
+  ]
+}
