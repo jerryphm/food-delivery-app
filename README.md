@@ -6,7 +6,7 @@
 
 ## What to expect
 
-![Tasty Treat](reviewProject.png)
+![Tasty Treat](overview.png)
 
 ## Features
 

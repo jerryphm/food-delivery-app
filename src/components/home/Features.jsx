@@ -34,7 +34,7 @@ function Features() {
                we will <span className='text-red-500'>take care</span>
             </h2>
          </section>
-         <section className='flex flex-col sm:flex-row items-center gap-3 sm:gap-7 mt-10 sm:mt-14'>
+         <section className='flex flex-col sm:flex-row items-center sm:justify-center gap-3 sm:gap-7 mt-10 sm:mt-14'>
             {featureData.map((feature, i) => (
                <div key={i} className='flex flex-col items-center'>
                   <img
