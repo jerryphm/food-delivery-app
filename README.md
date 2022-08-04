@@ -1,6 +1,6 @@
 # Tasty Treat Web App
 
-#### URL https://erykpham.github.io/food-delivery-app
+#### URL https://food-delivery-app-pi.vercel.app/
 
 #### A Food Ordering website with Front-End development.
 
