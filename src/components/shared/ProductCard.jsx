@@ -16,9 +16,12 @@ function ProductCard({ product }) {
                to={`/foods/${product.id}`}
             >
                <img
+                  style={{ contentVisibility: 'auto' }}
+                  loading='lazy'
+                  decoding='async'
                   src={product.imgUrl02}
                   className='h-[70px] w-[70px] sm:h-20 sm:w-20 md:h-24 md:w-24 lg:h-28 lg:w-28 mx-auto '
-                  alt='Food image'
+                  alt='Food'
                />
             </Link>
          </div>
