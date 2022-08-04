@@ -6,7 +6,13 @@ function WhyChooseTasty() {
    return (
       <section className='flex flex-col-reverse items-center gap-x-5 sm:flex-row mt-10'>
          <div className='shrink-0 grow-0 w-[80%] sm:w-[45%]'>
-            <img src={WhyChooseImg} alt='' />
+            <img
+               src={WhyChooseImg}
+               style={{ contentVisibility: 'auto' }}
+               loading='lazy'
+               decoding='async'
+               alt=''
+            />
          </div>
          <div className='text-center sm:text-left'>
             <h2 className='text-2xl mb-3 font-rnroll font-bold '>

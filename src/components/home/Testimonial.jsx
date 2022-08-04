@@ -21,7 +21,13 @@ function Testimonial() {
             </div>
          </div>
          <div className='shrink-0 grow-0 w-[80%] sm:w-[45%]'>
-            <img src={networkImg} alt='testimonial image' />
+            <img
+               src={networkImg}
+               style={{ contentVisibility: 'auto' }}
+               loading='lazy'
+               decoding='async'
+               alt='testimonial image'
+            />
          </div>
       </section>
    );

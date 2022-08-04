@@ -1,7 +1,5 @@
 import React from 'react';
-import lgBannerImgUrl from '../../assets/images/largeBanner.jpg';
 import mdBannerImgUrl from '../../assets/images/mediumBanner.jpg';
-import smBannerImgUrl from '../../assets/images/smallBanner.jpg';
 
 function CommonBanner({ title }) {
    return (
@@ -10,12 +8,9 @@ function CommonBanner({ title }) {
       lg:-mx-6'
       >
          <img
-            style={{ contentVisibility: 'auto' }}
-            srcSet={`${smBannerImgUrl} 1x,
-                   ${mdBannerImgUrl} 2x,
-                   ${lgBannerImgUrl} 3x`}
             src={mdBannerImgUrl}
-            alt='Banner image'
+            alt='Banner'
+            style={{ contentVisibility: 'auto' }}
             loading='lazy'
             decoding='async'
             className='w-full h-44 sm:h-56 md:h-64 lg:h-72 object-cover'

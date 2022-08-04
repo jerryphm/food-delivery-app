@@ -6,7 +6,7 @@ import React from 'react';
 import { setActivePage } from '../../store/activePage/activePage';
 
 function Cart({ dispatch: dispatchToggleCart }) {
-   const { cartItems, cartTotalPrice, cartTotalQuantity } = useSelector(
+   const { cartItems, cartTotalPrice } = useSelector(
       (state) => state.cart
    );
    const dispatch = useDispatch();

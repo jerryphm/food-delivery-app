@@ -58,7 +58,13 @@ function Hero() {
          </div>
          {/* hero image */}
          <div className='grow-0 shrink-0 w-[80%] sm:w-[47%] md:w-[45%] lg:w-[40%]'>
-            <img src={heroImage} alt='' />
+            <img
+               src={heroImage}
+               style={{ contentVisibility: 'auto' }}
+               decoding='async'
+               loading='lazy'
+               alt='hero'
+            />
          </div>
       </section>
    );

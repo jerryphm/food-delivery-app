@@ -41,6 +41,9 @@ function Features() {
                      className='h-[60px] w-[60px]'
                      src={feature.imgUrl}
                      alt='feature image'
+                     style={{ contentVisibility: 'auto' }}
+                     loading='lazy'
+                     decoding='async'
                   />
                   <h3 className='font-rnroll'>{feature.display}</h3>
                   <p className='text-center max-w-[40ch] opacity-90'>
