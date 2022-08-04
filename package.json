@@ -1,6 +1,5 @@
 {
   "name": "food-delivery-app",
-  "homepage": "/food-delivery-app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
