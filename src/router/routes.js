@@ -2,7 +2,7 @@ import {
    Cart,
    AllFoods,
    Checkout,
-   Contact,
+   Feedback,
    Home,
    Login,
    Register,
@@ -23,10 +23,10 @@ export const routesArr = [
    },
    {
       id: 5,
-      path: '/contact',
+      path: '/feedback',
       isMain: true,
-      display: 'Contact',
-      element: Contact,
+      display: 'Feedback',
+      element: Feedback,
    },
    { id: 6, path: '/login', isMain: false, display: 'Login', element: Login },
    {

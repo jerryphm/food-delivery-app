@@ -50,7 +50,7 @@ function Header() {
                <img
                   src={logo}
                   alt='Food Ordering Logo'
-                  className='h-8 w-8 sm:h-9 sm:w-9 lg:h-10 lg:w-10'
+                  className='h-[30px] w-[30px] sm:h-8 sm:w-8 md:h-9 md:w-9'
                />
                <h4 className='font-bold font-rnroll'>Tasty Treat</h4>
             </Link>
@@ -60,7 +60,7 @@ function Header() {
                <div className='mark-sub-links flex gap-2'>
                   <div onClick={handleDispatchShowCart} className='relative'>
                      <RiShoppingBagLine
-                        className={`text-2xl sm:text-3xl lg:text-4xl cursor-pointer ${
+                        className={`text-2xl md:text-3xl cursor-pointer ${
                            isShowCart ? 'text-red-500' : ''
                         }`}
                      />
@@ -75,14 +75,14 @@ function Header() {
                      to='/login'
                   >
                      <RiUserLine
-                        className={`text-2xl sm:text-3xl lg:text-4xl ${
+                        className={`text-2xl md:text-3xl ${
                            activePage == '/login' ? 'text-red-500' : ''
                         }`}
                      />
                   </Link>
                   <div
                      onClick={handleDispatchShowMenu}
-                     className={`ml-2 md:hidden text-2xl sm:text-3xl lg:text-4xl cursor-pointer ${
+                     className={`md:hidden text-2xl md:text-3xl cursor-pointer ${
                         isShowMenu ? 'text-red-500' : null
                      }`}
                   >
@@ -96,13 +96,20 @@ function Header() {
             <>
                <MainLinksComp
                   dispatch={handleDispatchShowMenu}
-                  className='md:hidden fixed right-0 top-[64px] sm:top-[80px] flex flex-col items-end gap-10 w-fit min-w-[40vw] h-screen pt-14 rounded-bl-md bg-white font-rnroll shadow-2xl'
+                  className='md:hidden fixed right-0 top-[64px] sm:top-[72px] md:top-[76px] flex flex-col items-end gap-10 w-fit min-w-[40vw] h-screen pt-14 rounded-bl-md bg-white font-rnroll shadow-2xl'
                />
                <Modal dispatch={handleDispatchShowMenu} />
             </>
          ) : null}
          {/* render cart */}
-         <>{isShowCart ? <Cart dispatch={handleDispatchShowCart} /> : null}</>
+         <>
+            {isShowCart ? (
+               <>
+                  <Cart dispatch={handleDispatchShowCart} />
+                  <Modal dispatch={handleDispatchShowCart} />
+               </>
+            ) : null}
+         </>
       </header>
    );
 }

@@ -42,6 +42,7 @@ function Footer() {
                      </h4>
                      <p className='leading-4'>Off day</p>
                   </section>
+
                   <section>
                      <h3 className='text-[18px] font-bold font-rnroll'>Contact</h3>
                      <h4 className='mt-1 sm:mt-2 md:mt-3'>
@@ -63,6 +64,7 @@ function Footer() {
                         : example@gmail.com
                      </h4>
                   </section>
+
                   <section>
                      <h3 className='text-[18px] font-bold font-rnroll'>
                         Newsletter
@@ -76,7 +78,7 @@ function Footer() {
                            placeholder='Enter your email'
                            required
                            pattern="^[a-zA-Z0-9.! #$%&'*+/=? ^_`{|}~-]+@[a-zA-Z0-9-]+(?:\. [a-zA-Z0-9-]+)*$"
-                           className='w-full px-1 text-[15px] sm:text-[18px] capitalize outline-none'
+                           className='w-full px-1 capitalize outline-none'
                         />
                         <button
                            type='submit'

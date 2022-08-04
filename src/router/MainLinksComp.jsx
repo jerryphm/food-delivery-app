@@ -24,7 +24,7 @@ function MainLinksComp({ className, dispatch: dispatchToggleMenu }) {
                   dispatch(setActivePage(path));
                   if (dispatchToggleMenu) dispatchToggleMenu();
                }}
-               className={`py-1 w-full text-center ${
+               className={`py-1 w-[70%] mx-auto  text-center ${
                   urlPath == path ? 'text-red-500' : null
                }`}
                to={path}

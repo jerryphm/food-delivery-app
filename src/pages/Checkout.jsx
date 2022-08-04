@@ -2,11 +2,13 @@ import React from 'react';
 import { CommonBanner } from '../components/shared';
 import { helmet } from '../helmet';
 import { useSelector, useDispatch } from 'react-redux';
+import { setActivePage } from '../store/activePage/activePage';
 import { Link} from 'react-router-dom';
 import { useState } from 'react';
 
 function Checkout() {
    helmet('Checkout');
+   const dispatch = useDispatch()
    const cartTotalPrice = useSelector((state) => state.cart.cartTotalPrice);
    const [userName, setUserName] = useState('');
    const [userEmail, setUserEmail] = useState('');
@@ -99,7 +101,7 @@ function Checkout() {
                <div className='flex flex-col items-center font-rnroll lg:text-xl'>
                   <span>You haven't ordered anything yet</span>
                   <button className='px-3 py-1 sm:px-4 md:px-5 md:py-2 lg:px-7 lg:py-[10px] rounded-md mt-8 text-white bg-red-500'>
-                     <Link to='/foods'>Continue Shopping</Link>
+                     <Link onClick={() => dispatch(setActivePage('/foods'))} to='/foods'>Continue Shopping</Link>
                   </button>
                </div>
             )}
