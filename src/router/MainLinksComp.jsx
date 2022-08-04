@@ -27,6 +27,7 @@ function MainLinksComp({ className, dispatch: dispatchToggleMenu }) {
                onClick={() => {
                   dispatch(setActivePage(path));
                   if (dispatchToggleMenu) dispatchToggleMenu();
+                  window.scrollTo(0, 0)
                }}
                className={`py-1 w-[70%] mx-auto  text-center ${
                   checkIsActivePage(path) ? 'text-red-500' : null

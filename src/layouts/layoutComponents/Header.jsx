@@ -50,6 +50,7 @@ function Header() {
                onClick={() => {
                   if (isShowMenu) handleDispatchShowMenu();
                   dispatch(setActivePage('/'));
+                  window.scrollTo(0, 0)
                }}
                to='/'
                className='flex flex-col items-center'
@@ -72,7 +73,7 @@ function Header() {
                         }`}
                      />
                      {cartTotalQuantity !== 0 ? (
-                        <span className='absolute top-[-2px] sm:top-[1px] right-[-3px] sm:right-[0px] lg:top-[-2px] lg:right-[0px] px-[3px] lg:px-[5px] pb-[1px] lg:pb-0 leading-[1] bg-red-500 rounded-full text-white font-rnroll text-sm lg:text-base cursor-pointer'>
+                        <span className='absolute top-[-2px] sm:top-[1px] lg:top-[-2px] right-[-3px] sm:right-[0px] lg:right-[0px]  px-[3px] pb-[1px] leading-[1] bg-red-500 rounded-full text-white font-rnroll text-sm lg:text-[15px] cursor-pointer'>
                            {cartTotalQuantity}
                         </span>
                      ) : null}
@@ -81,6 +82,7 @@ function Header() {
                      onClick={() => {
                         dispatch(setActivePage('/login'));
                         handleHideCartAndBar();
+                        window.scrollTo(0, 0)
                      }}
                      to='/login'
                   >
