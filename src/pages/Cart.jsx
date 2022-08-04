@@ -1,10 +1,12 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { CommonBanner } from '../components/shared';
-import { helmet } from '../helmet';
-import { useSelector, useDispatch } from 'react-redux';
-import { deleteItem } from '../store/shoppingCart/cartSlice';
+import { useDispatch, useSelector } from 'react-redux';
+
 import { BiTrash } from 'react-icons/bi';
+import { CommonBanner } from '../components/shared';
+import { Link } from 'react-router-dom';
+import React from 'react';
+import { deleteItem } from '../store/shoppingCart/cartSlice';
+import { helmet } from '../helmet';
+import { setActivePage } from '../store/activePage/activePage';
 
 function Cart() {
    helmet('Cart');
@@ -70,17 +72,13 @@ function Cart() {
                      </tbody>
                   </table>
                   <div className='mt-3'>
-                     
-                        <span className='font-rnroll sm:text-lg'>
-                           Subtotal:
-                           <span className='text-red-500 ml-1 sm:ml-2'>
-                              ${cartTotalPrice}
-                           </span>
-                        </span>{' '}
-                        <p>
-                        Taxes and shipping will calculate at checkout.
-                        </p>
-                   
+                     <span className='font-rnroll sm:text-lg'>
+                        Subtotal:
+                        <span className='text-red-500 ml-1 sm:ml-2'>
+                           ${cartTotalPrice}
+                        </span>
+                     </span>{' '}
+                     <p>Taxes and shipping will calculate at checkout.</p>
                   </div>
                </>
             ) : (
@@ -88,12 +86,22 @@ function Cart() {
                   <span>You haven't ordered anything yet.</span>
                </div>
             )}
-            <div className={`flex gap-5 mt-4 mb-14 ${cartItems.length != 0 ?'' :'justify-center'}`}>
-               <button className='px-3 py-1 sm:px-4 md:px-5 md:py-2 lg:px-7 lg:py-[10px] rounded-md text-white bg-red-500'>
+            <div
+               className={`flex gap-5 mt-4 mb-14 ${
+                  cartItems.length != 0 ? '' : 'justify-center'
+               }`}
+            >
+               <button
+                  onClick={() => dispatch(setActivePage('/foods'))}
+                  className='px-3 py-1 sm:px-4 md:px-5 md:py-2 lg:px-7 lg:py-[10px] rounded-md text-white bg-red-500'
+               >
                   <Link to='/foods'>Continue Shopping</Link>
                </button>
                {cartItems.length != 0 ? (
-                  <button className='px-3 py-1 sm:px-4 md:px-5 md:py-2 lg:px-7 lg:py-[10px] rounded-md text-white bg-red-500'>
+                  <button
+                     onClick={() => dispatch(setActivePage('/checkout'))}
+                     className='px-3 py-1 sm:px-4 md:px-5 md:py-2 lg:px-7 lg:py-[10px] rounded-md text-white bg-red-500'
+                  >
                      <Link to='/checkout'>Proceed to checkout</Link>
                   </button>
                ) : null}

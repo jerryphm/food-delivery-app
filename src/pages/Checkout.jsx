@@ -1,14 +1,15 @@
-import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+
 import { CommonBanner } from '../components/shared';
+import { Link } from 'react-router-dom';
+import React from 'react';
 import { helmet } from '../helmet';
-import { useSelector, useDispatch } from 'react-redux';
 import { setActivePage } from '../store/activePage/activePage';
-import { Link} from 'react-router-dom';
 import { useState } from 'react';
 
 function Checkout() {
    helmet('Checkout');
-   const dispatch = useDispatch()
+   const dispatch = useDispatch();
    const cartTotalPrice = useSelector((state) => state.cart.cartTotalPrice);
    const [userName, setUserName] = useState('');
    const [userEmail, setUserEmail] = useState('');
@@ -26,7 +27,10 @@ function Checkout() {
             userLocation,
          },
       ];
-      console.info('...successfully get USER_CHECKOUT_INFO',USER_CHECKOUT_INFO)
+      console.info(
+         '...successfully get USER_CHECKOUT_INFO',
+         USER_CHECKOUT_INFO
+      );
    };
 
    return (
@@ -72,7 +76,7 @@ function Checkout() {
                            type='submit'
                            className='px-3 py-1 sm:px-4 md:px-5 md:py-2 lg:px-7 lg:py-[10px] rounded-md mx-auto mt-3 text-white bg-red-500'
                         >
-                           <Link to='/login' >Payment</Link>
+                           <Link to='/login'>Payment</Link>
                         </button>
                      </form>
                      <div className='grow-1 sm:w-auto px-3 py-1 rounded-sm bg-lpink'>
@@ -85,7 +89,7 @@ function Checkout() {
                         <span>
                            Shipping:{' '}
                            <span className='block sm:inline font-bold'>
-                              $10
+                              Free
                            </span>
                         </span>
                         <h3>
@@ -101,7 +105,12 @@ function Checkout() {
                <div className='flex flex-col items-center font-rnroll lg:text-xl'>
                   <span>You haven't ordered anything yet</span>
                   <button className='px-3 py-1 sm:px-4 md:px-5 md:py-2 lg:px-7 lg:py-[10px] rounded-md mt-8 text-white bg-red-500'>
-                     <Link onClick={() => dispatch(setActivePage('/foods'))} to='/foods'>Continue Shopping</Link>
+                     <Link
+                        onClick={() => dispatch(setActivePage('/foods'))}
+                        to='/foods'
+                     >
+                        Continue Shopping
+                     </Link>
                   </button>
                </div>
             )}

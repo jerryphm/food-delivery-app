@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { helmet } from '../helmet';
+
 import { CommonBanner } from '../components/shared';
-import { useSelector, useDispatch } from 'react-redux';
-import { Link, Routes, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { helmet } from '../helmet';
 
 function Register() {
    helmet('Register');

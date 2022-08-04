@@ -1,11 +1,12 @@
-import React from 'react';
-import { BsPlusLg, BsDashLg } from 'react-icons/bs';
-import { CgClose } from 'react-icons/cg';
+import { BsDashLg, BsPlusLg } from 'react-icons/bs';
 import {
    addItem,
-   removeItem,
    deleteItem,
+   removeItem,
 } from '../../store/shoppingCart/cartSlice';
+
+import { CgClose } from 'react-icons/cg';
+import React from 'react';
 import { useDispatch } from 'react-redux';
 
 function CartItem({ cartItem }) {
@@ -48,8 +49,10 @@ function CartItem({ cartItem }) {
                </button>
             </div>
          </div>
-         <button 
-         onClick={() => dispatch(deleteItem(id))} className='mark-deleteItem translate-y-2 font-rnroll text-xl lg:text-2xl p-2'>
+         <button
+            onClick={() => dispatch(deleteItem(id))}
+            className='mark-deleteItem translate-y-2 font-rnroll text-xl lg:text-2xl p-2'
+         >
             <CgClose />
          </button>
       </section>

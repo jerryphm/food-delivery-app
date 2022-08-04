@@ -1,6 +1,6 @@
+import { ProductCard } from '../shared';
 import React from 'react';
 import { pizzaProducts } from '../../assets/data/products';
-import { ProductCard } from '../shared';
 
 function HotPizza() {
    return (

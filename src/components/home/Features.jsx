@@ -25,16 +25,16 @@ const featureData = [
 ];
 function Features() {
    return (
-      <div className='my-10'>
-         <section className='text-center font-rnroll font-bold '>
+      <div className='mt-16 sm:mt-20'>
+         <section className='text-center font-rnroll font-bold'>
             <h3 className='text-red-500 md:text-lg'>What we serve</h3>
-            <h2 className='text-2xl mb-3'>
+            <h2 className='text-2xl mt-2 sm:mt-3 mb-3'>
                <span className='whitespace-nowrap'>Just sit back at home</span>
                <br />
                we will <span className='text-red-500'>take care</span>
             </h2>
          </section>
-         <section className='flex flex-col sm:flex-row items-center gap-3 sm:gap-7 mt-8'>
+         <section className='flex flex-col sm:flex-row items-center gap-3 sm:gap-7 mt-10 sm:mt-14'>
             {featureData.map((feature, i) => (
                <div key={i} className='flex flex-col items-center'>
                   <img

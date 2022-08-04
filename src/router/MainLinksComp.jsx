@@ -1,21 +1,25 @@
-import React, { useState } from 'react';
-import { useMemo } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+
 import { Link } from 'react-router-dom';
 import { routesArr } from './routes';
-import { useSelector, useDispatch } from 'react-redux';
 import { setActivePage } from '../store/activePage/activePage';
+import { useMemo } from 'react';
 
 function MainLinksComp({ className, dispatch: dispatchToggleMenu }) {
    const dispatch = useDispatch();
    const activePage = useSelector((state) => state.activePage.activePage);
    const mainRoutesArr = routesArr.filter((routes) => routes.isMain);
    const draftUrlPath = useMemo(() => window.location.pathname, []);
-   let urlPath;
-   if (activePage) {
-      urlPath = activePage;
-   } else {
-      urlPath = draftUrlPath;
-   }
+   const checkIsActivePage = (path) => {
+      if (activePage) {
+         return activePage == path;
+      } else {
+         if (path != '/foods') {
+            return draftUrlPath == path;
+         }
+         return draftUrlPath.includes(path);
+      }
+   };
    return (
       <div className={className}>
          {mainRoutesArr.map(({ path, display, id }) => (
@@ -25,7 +29,7 @@ function MainLinksComp({ className, dispatch: dispatchToggleMenu }) {
                   if (dispatchToggleMenu) dispatchToggleMenu();
                }}
                className={`py-1 w-[70%] mx-auto  text-center ${
-                  urlPath == path ? 'text-red-500' : null
+                  checkIsActivePage(path) ? 'text-red-500' : null
                }`}
                to={path}
                key={id}

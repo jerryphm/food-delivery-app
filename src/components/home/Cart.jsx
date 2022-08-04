@@ -1,8 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
-import { setActivePage } from '../../store/activePage/activePage';
+import { useDispatch, useSelector } from 'react-redux';
+
 import CartItem from './CartItem';
+import { Link } from 'react-router-dom';
+import React from 'react';
+import { setActivePage } from '../../store/activePage/activePage';
 
 function Cart({ dispatch: dispatchToggleCart }) {
    const { cartItems, cartTotalPrice, cartTotalQuantity } = useSelector(
@@ -12,7 +13,7 @@ function Cart({ dispatch: dispatchToggleCart }) {
 
    return (
       <section
-         className='flex flex-col justify-between fixed right-0 top-[64px] sm:top-[72px] md:top-[76px] w-[70vw] sm:w-[60vw md:w-[45vw] lg:w-[30vw]]
+         className='flex flex-col justify-between fixed right-0 top-[62px] sm:top-[72px] md:top-[76px] w-[70vw] sm:w-[60vw md:w-[45vw] lg:w-[30vw]]
          px-3 py-2 md:px-6 md:py-4 lg:px-10 lg:py-7 rounded-bl-md bg-white font-rnroll shadow-2xl'
       >
          <div className='h-[55vh] overflow-y-scroll'>
@@ -42,8 +43,11 @@ function Cart({ dispatch: dispatchToggleCart }) {
                <Link
                   onClick={(e) => {
                      dispatch(setActivePage('/checkout'));
-                     e.preventDefault();
-                     e.stopPropagation();
+                     console.log(cartItems);
+                     if (!cartItems[0]) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                     }
                   }}
                   to='/checkout'
                >

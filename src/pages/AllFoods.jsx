@@ -1,12 +1,13 @@
-import React, { useState, useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
+
 import { CommonBanner } from '../components/shared';
-import { helmet } from '../helmet';
 import { HiSearch } from 'react-icons/hi';
 import { IoIosArrowDown } from 'react-icons/io';
-import { TbMoodSad } from 'react-icons/tb';
-import { products } from '../assets/data/products';
 import { ProductCard } from '../components/shared';
 import ReactPaginate from 'react-paginate';
+import { TbMoodSad } from 'react-icons/tb';
+import { helmet } from '../helmet';
+import { products } from '../assets/data/products';
 
 helmet('Foods');
 let items = [];
@@ -103,7 +104,6 @@ function AllFoods() {
                      <li class='rounded-sm bg-red-500 text-white font-rnroll'>
                         <a class='px-3 py-1 font-rnroll'>1</a>
                      </li>
-                     
                   </ul>
                </>
             ) : (
@@ -121,14 +121,12 @@ function AllFoods() {
 //// react-paginate's code
 
 function PaginatedItems({ itemsPerPage, isSearching, isSorting }) {
-
    // start with an empty list of items.
    const [currentItems, setCurrentItems] = useState(null);
    const [pageCount, setPageCount] = useState(0);
 
    const [itemOffset, setItemOffset] = useState(0);
    let reduceCompReRenderTrick;
-
 
    useMemo(() => {
       const endOffset = itemOffset + itemsPerPage;

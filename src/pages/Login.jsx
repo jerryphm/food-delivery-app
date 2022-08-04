@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { helmet } from '../helmet';
+
 import { CommonBanner } from '../components/shared';
-import { useSelector, useDispatch } from 'react-redux';
-import { Link, Routes, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { helmet } from '../helmet';
 
 function Login() {
    helmet('Login');
@@ -45,7 +45,7 @@ function Login() {
                   placeholder='Enter your password'
                />
                <button
-               onClick={handleUserLoginInfo}
+                  onClick={handleUserLoginInfo}
                   type='submit'
                   className='px-3 py-1 sm:px-4 md:px-5 md:py-2 lg:px-7 lg:py-[10px] rounded-md mx-auto mt-3 text-white bg-red-500'
                >

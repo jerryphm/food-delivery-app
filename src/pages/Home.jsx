@@ -1,14 +1,15 @@
-import React from 'react';
-import { helmet } from '../helmet';
 import {
-   Hero,
    Category,
    Features,
-   PopularFoods,
-   WhyChooseTasty,
+   Hero,
    HotPizza,
-   Testimonial
+   PopularFoods,
+   Testimonial,
+   WhyChooseTasty,
 } from '../components/home';
+
+import React from 'react';
+import { helmet } from '../helmet';
 
 function Home() {
    helmet('Home');

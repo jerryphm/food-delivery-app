@@ -1,7 +1,7 @@
 import React from 'react';
-import smBannerImgUrl from '../../assets/images/smallBanner.jpg';
-import mdBannerImgUrl from '../../assets/images/mediumBanner.jpg';
 import lgBannerImgUrl from '../../assets/images/largeBanner.jpg';
+import mdBannerImgUrl from '../../assets/images/mediumBanner.jpg';
+import smBannerImgUrl from '../../assets/images/smallBanner.jpg';
 
 function CommonBanner({ title }) {
    return (

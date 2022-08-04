@@ -1,3 +1,3 @@
 export const helmet = (helmet) => {
-   document.title = 'Food Ordering App | ' + helmet
-}
+   document.title = 'Food Ordering App | ' + helmet;
+};

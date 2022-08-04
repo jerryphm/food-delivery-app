@@ -1,13 +1,13 @@
 import React from 'react';
-import networkImg from '../../assets/images/network.png';
 import { TestimonialSlider } from './index';
+import networkImg from '../../assets/images/network.png';
 
 function Testimonial() {
    return (
-      <section className='flex flex-col items-center sm:flex-row gap-3 mt-10'>
+      <section className='flex flex-col items-center sm:flex-row gap-3 mt-16 sm:mt-20'>
          <div className='text-center sm:text-left font-rnroll font-bold '>
-            <h3 className='text-red-500 md:text-lg'>Testimonial</h3>
-            <h2 className='text-2xl mb-3'>
+            <h3 className='text-red-500 md:text-lg mb-1'>Testimonial</h3>
+            <h2 className='text-2xl mb-5'>
                What our <span className='text-red-500'>customers</span>
                &nbsp;are saying
             </h2>

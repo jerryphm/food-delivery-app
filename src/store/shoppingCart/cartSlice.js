@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+
 const initialState = {
    cartItems: [],
    cartTotalQuantity: 0,
@@ -20,7 +21,7 @@ const cartSlice = createSlice({
             state.cartItems.unshift({
                itemTotalQuantity: 1,
                itemTotalPrice: newItem.price,
-               ...newItem
+               ...newItem,
             });
          } else {
             existingItem.itemTotalQuantity++;

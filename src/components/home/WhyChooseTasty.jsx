@@ -1,6 +1,6 @@
 import React from 'react';
-import WhyChooseImg from '../../assets/images/location.png';
 import { RiCheckboxCircleLine } from 'react-icons/ri';
+import WhyChooseImg from '../../assets/images/location.png';
 
 function WhyChooseTasty() {
    return (
@@ -45,7 +45,6 @@ function WhyChooseTasty() {
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                </p>
             </div>
-
          </div>
       </section>
    );

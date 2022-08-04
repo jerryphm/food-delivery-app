@@ -1,20 +1,19 @@
-import { Link } from 'react-router-dom';
-import MainLinksComp from '../../router/MainLinksComp';
-import logo from '../../assets/images/res-logo.png';
 import {
-   RiUserLine,
-   RiMenuLine,
    RiMenu3Line,
+   RiMenuLine,
    RiShoppingBagLine,
+   RiUserLine,
 } from 'react-icons/ri';
-import { useSelector, useDispatch } from 'react-redux';
-import { showMenuActs } from '../../store/menu/showMenuSlice';
-import { showCartActs } from '../../store/shoppingCart/showCartSlice';
-
-import { setActivePage } from '../../store/activePage/activePage';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { Cart } from '../../components/home';
+import { Link } from 'react-router-dom';
+import MainLinksComp from '../../router/MainLinksComp';
 import { Modal } from '../../components/shared';
+import logo from '../../assets/images/res-logo.png';
+import { setActivePage } from '../../store/activePage/activePage';
+import { showCartActs } from '../../store/shoppingCart/showCartSlice';
+import { showMenuActs } from '../../store/menu/showMenuSlice';
 
 function Header() {
    const dispatch = useDispatch();
@@ -31,6 +30,11 @@ function Header() {
       dispatch(showCartActs.toggleShowCart());
       dispatch(showMenuActs.toggleShowMenu('hide'));
    };
+   //hide cart and bar when clicking:
+   const handleHideCartAndBar = () => {
+      dispatch(showCartActs.toggleShowCart('hide'));
+      dispatch(showMenuActs.toggleShowMenu('hide'));
+   };
    const isShowCart = useSelector((state) => state.showCart.isShowCart);
 
    const cartTotalQuantity = useSelector(
@@ -43,7 +47,10 @@ function Header() {
       <header className='fixed z-[999] top-0 right-0 left-0 flex justify-center'>
          <div className='flex justify-between items-center max-w-7xl w-full py-1 sm:py-2 px-2 sm:px-3 md:px-4 lg:px-6 mx-auto bg-white'>
             <Link
-               onClick={isShowMenu ? handleDispatchShowMenu : null}
+               onClick={() => {
+                  if (isShowMenu) handleDispatchShowMenu();
+                  dispatch(setActivePage('/'));
+               }}
                to='/'
                className='flex flex-col items-center'
             >
@@ -71,7 +78,10 @@ function Header() {
                      ) : null}
                   </div>
                   <Link
-                     onClick={() => dispatch(setActivePage('/login'))}
+                     onClick={() => {
+                        dispatch(setActivePage('/login'));
+                        handleHideCartAndBar();
+                     }}
                      to='/login'
                   >
                      <RiUserLine
@@ -96,7 +106,7 @@ function Header() {
             <>
                <MainLinksComp
                   dispatch={handleDispatchShowMenu}
-                  className='md:hidden fixed right-0 top-[64px] sm:top-[72px] md:top-[76px] flex flex-col items-end gap-10 w-fit min-w-[40vw] h-screen pt-14 rounded-bl-md bg-white font-rnroll shadow-2xl'
+                  className='md:hidden fixed right-0 top-[62px] sm:top-[72px] md:top-[76px] flex flex-col items-end gap-10 w-fit min-w-[40vw] h-screen pt-14 rounded-bl-md bg-white font-rnroll shadow-2xl'
                />
                <Modal dispatch={handleDispatchShowMenu} />
             </>

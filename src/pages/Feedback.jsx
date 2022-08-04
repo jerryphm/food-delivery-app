@@ -1,7 +1,7 @@
-import React from 'react';
 import { CommonBanner } from '../components/shared';
-import { helmet } from '../helmet';
+import React from 'react';
 import happySvgImg from '../assets/images/happy-svgrepo-com.svg';
+import { helmet } from '../helmet';
 
 function Feedback() {
    helmet('Feedback');
@@ -23,7 +23,7 @@ function Feedback() {
                   />
                </p>
             </div>
-            <form className='flex flex-col gap-4 px-4 py-4 sm:p-5 w-[80vw] max-w-[600px] rounded-sm bg-lpink py-1 [&_input]:px-2 [&_input]:rounded-sm [&_input]:min-h-[44px]'>
+            <form className='flex flex-col gap-4 px-4 py-4 sm:p-5 w-[80vw] max-w-[600px] rounded-sm bg-lpink [&_input]:px-2 [&_input]:rounded-sm [&_input]:min-h-[44px]'>
                <div className='flex flex-col sm:flex-row gap-4  sm:gap-[5%]'>
                   <input type='text' placeholder='First name' />
                   <input type='text' placeholder='Last name' />

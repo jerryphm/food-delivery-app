@@ -1,13 +1,14 @@
 import {
-   Cart,
    AllFoods,
+   Cart,
    Checkout,
    Feedback,
+   FoodDetails,
    Home,
    Login,
    Register,
-   FoodDetails,
 } from '../pages';
+
 import { products } from '../assets/data/products';
 
 export const routesArr = [
@@ -39,7 +40,7 @@ export const routesArr = [
 ];
 
 for (let product of products) {
-   const lastIndex = routesArr.length - 1
+   const lastIndex = routesArr.length - 1;
    routesArr.push({
       id: lastIndex,
       path: `/foods/${product.id}`,

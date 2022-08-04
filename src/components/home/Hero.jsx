@@ -1,12 +1,16 @@
-import React from 'react';
-import { IoIosArrowForward } from 'react-icons/io';
-import { RiCarLine } from 'react-icons/ri';
+import { useDispatch, useSelector } from 'react-redux';
+
 import { BiCheckShield } from 'react-icons/bi';
+import { IoIosArrowForward } from 'react-icons/io';
 import { Link } from 'react-router-dom';
-import heroImage from '../../assets/images/hero.png';
+import React from 'react';
+import { RiCarLine } from 'react-icons/ri';
 import { Link as SmoothLink } from 'react-scroll';
+import heroImage from '../../assets/images/hero.png';
+import { setActivePage } from '../../store/activePage/activePage';
 
 function Hero() {
+   const dispatch = useDispatch();
    return (
       <section className='flex flex-col sm:flex-row items-center sm:items-center sm:justify-between sm:gap-x-[5vw] py-10'>
          {/* hero text */}
@@ -32,8 +36,13 @@ function Hero() {
                      <IoIosArrowForward className='inline-block' />
                   </SmoothLink>
                </button>
-               <button className='py-[7px] px-4 rounded-md border-[1px] border-red-500'>
-                  <Link to='/foods'>See all foods</Link>
+               <button className='py-[7px] px-4 rounded-md border-[1px  ] border-red-500'>
+                  <Link
+                     onClick={() => dispatch(setActivePage('/foods'))}
+                     to='/foods'
+                  >
+                     See all foods
+                  </Link>
                </button>
             </div>
             <div className='flex flex-col lg:flex-row items-center sm:items-start lg:text-lg opacity-[0.9]'>

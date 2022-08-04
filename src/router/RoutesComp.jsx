@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
-import {routesArr} from './routes'
+
+import { routesArr } from './routes';
 
 function RoutesComp() {
    return (
