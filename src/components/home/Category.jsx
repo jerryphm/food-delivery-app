@@ -5,7 +5,7 @@ import categoryImg02 from '../../assets/images/category-02.png';
 import categoryImg03 from '../../assets/images/category-03.png';
 import categoryImg04 from '../../assets/images/category-04.png';
 import { setActivePage } from '../../store/activePage/activePage';
-import {useDispatch} from 'react-redux'
+import { useDispatch } from 'react-redux';
 
 const categoryData = [
    { display: 'Fastfood', imgUrl: categoryImg01 },
@@ -15,14 +15,17 @@ const categoryData = [
 ];
 
 function Category() {
-   const dispatch = useDispatch()
+   const dispatch = useDispatch();
    return (
       <div className='flex flex-wrap justify-between gap-4'>
          {categoryData.map((categoryItem, index) => (
             <Link
                className='flex items-center gap-2 w-[47%] sm:w-[23%] py-2 px-3 rounded-md bg-lpink cursor-pointer transition-all hover:-translate-y-2'
                key={index}
-               onClick={() => dispatch(setActivePage('/foods'))}
+               onClick={() => {
+                  dispatch(setActivePage('/foods'));
+                  window.scrollTo(0, 0);
+               }}
                to='/foods'
             >
                <img

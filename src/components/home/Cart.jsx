@@ -6,9 +6,7 @@ import React from 'react';
 import { setActivePage } from '../../store/activePage/activePage';
 
 function Cart({ dispatch: dispatchToggleCart }) {
-   const { cartItems, cartTotalPrice } = useSelector(
-      (state) => state.cart
-   );
+   const { cartItems, cartTotalPrice } = useSelector((state) => state.cart);
    const dispatch = useDispatch();
 
    return (
@@ -36,18 +34,18 @@ function Cart({ dispatch: dispatchToggleCart }) {
                      dispatchToggleCart();
                   }
                }}
-               className={`px-3 py-1 sm:px-4 md:px-5 md:py-2 lg:px-7 lg:py-[10px] rounded-md text-white bg-red-500 ${
-                  cartItems[0] ? '' : 'opacity-50'
-               }`}
             >
                <Link
+                  className={`px-3 py-1 sm:px-4 md:px-5 md:py-2 lg:px-7 lg:py-[10px] rounded-md text-white bg-red-500 ${
+                     cartItems[0] ? '' : 'opacity-50'
+                  }`}
                   onClick={(e) => {
                      dispatch(setActivePage('/checkout'));
-                     console.log(cartItems);
                      if (!cartItems[0]) {
                         e.preventDefault();
                         e.stopPropagation();
                      }
+                     window.scrollTo(0, 0);
                   }}
                   to='/checkout'
                >

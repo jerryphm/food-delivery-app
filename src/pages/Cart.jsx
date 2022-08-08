@@ -92,14 +92,20 @@ function Cart() {
                }`}
             >
                <button
-                  onClick={() => dispatch(setActivePage('/foods'))}
+                  onClick={() => {
+                     dispatch(setActivePage('/foods'));
+                     window.scrollTo(0, 0);
+                  }}
                   className='px-3 py-1 sm:px-4 md:px-5 md:py-2 lg:px-7 lg:py-[10px] rounded-md text-white bg-red-500'
                >
                   <Link to='/foods'>Continue Shopping</Link>
                </button>
                {cartItems.length != 0 ? (
                   <button
-                     onClick={() => dispatch(setActivePage('/checkout'))}
+                     onClick={() => {
+                        dispatch(setActivePage('/checkout'));
+                        window.scrollTo(0, 0);
+                     }}
                      className='px-3 py-1 sm:px-4 md:px-5 md:py-2 lg:px-7 lg:py-[10px] rounded-md text-white bg-red-500'
                   >
                      <Link to='/checkout'>Proceed to checkout</Link>
